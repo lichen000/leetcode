@@ -29,16 +29,6 @@ package mangolost;
  */
 public class Solution0263 {
 
-    public static void main(String[] args) {
-        Solution0263 solution = new Solution0263();
-        for (int i = 0; i < 10000; i++) {
-            if (solution.isUgly(i)) {
-                System.out.println(i);
-            }
-        }
-        System.out.println(solution.isUgly(Integer.MAX_VALUE));
-    }
-
     /**
      * @param num
      * @return
@@ -57,5 +47,15 @@ public class Solution0263 {
             num = num / 5;
         }
         return num == 1;
+    }
+
+    public static void main(String[] args) {
+        Solution0263 solution = new Solution0263();
+        for (int i = 0; i < 10000; i++) {
+            if (solution.isUgly(i)) {
+                System.out.println(i);
+            }
+        }
+        System.out.println(solution.isUgly(Integer.MAX_VALUE));
     }
 }
