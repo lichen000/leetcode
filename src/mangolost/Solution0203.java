@@ -8,20 +8,20 @@ package mangolost;
 //        Output: 1->2->3->4->5
 
 /**
- * Definition for singly-linked list.
- *
- *
- */
-class ListNode {
-    int val;
-    ListNode next;
-    ListNode(int x) { val = x; }
-}
-
-/**
  *
  */
 public class Solution0203 {
+
+    /**
+     * Definition for singly-linked list.
+     *
+     *
+     */
+    static class ListNode {
+        int val;
+        ListNode next;
+        ListNode(int x) { val = x; }
+    }
 
     public ListNode removeElements(ListNode head, int val) {
         while(head != null) {
