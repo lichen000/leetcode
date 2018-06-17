@@ -14,9 +14,7 @@ package mangolost;
 //		62 + 82 = 100
 //		12 + 02 + 02 = 1
 
-import java.util.HashMap;
 import java.util.HashSet;
-import java.util.Map;
 import java.util.Set;
 
 /**
