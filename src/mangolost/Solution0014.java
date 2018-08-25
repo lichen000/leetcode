@@ -23,7 +23,6 @@ package mangolost;
 public class Solution0014 {
 
     /**
-     *
      * @param strs
      * @return
      */
@@ -35,7 +34,7 @@ public class Solution0014 {
             return strs[0];
         }
         int minLength = Integer.MAX_VALUE;
-        for (String str: strs) {
+        for (String str : strs) {
             int len = str.length();
             if (len < minLength) {
                 minLength = len;
@@ -66,7 +65,7 @@ public class Solution0014 {
 
     public static void main(String[] args) {
         Solution0014 solution = new Solution0014();
-        String[] x = new String[]{"flower","flow","flight"};
+        String[] x = new String[]{"flower", "flow", "flight"};
         String y = solution.longestCommonPrefix(x);
         System.out.println(y);
     }

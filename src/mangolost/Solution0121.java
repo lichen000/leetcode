@@ -24,7 +24,6 @@ package mangolost;
 public class Solution0121 {
 
     /**
-     *
      * @param prices
      * @return
      */
@@ -47,7 +46,7 @@ public class Solution0121 {
 
     public static void main(String[] args) {
         Solution0121 solution = new Solution0121();
-        int[] prices = new int[]{7,1,5,3,6,4};
+        int[] prices = new int[]{7, 1, 5, 3, 6, 4};
         System.out.println(solution.maxProfit(prices));
     }
 }

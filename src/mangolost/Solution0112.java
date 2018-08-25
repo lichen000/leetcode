@@ -29,13 +29,13 @@ public class Solution0112 {
         int val;
         TreeNode left = null;
         TreeNode right = null;
+
         TreeNode(int x) {
             val = x;
         }
     }
 
     /**
-     *
      * @param root
      * @param sum
      * @return

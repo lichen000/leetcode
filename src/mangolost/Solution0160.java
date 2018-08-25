@@ -27,39 +27,38 @@ public class Solution0160 {
 
     /**
      * Definition for singly-linked list.
-     *
      */
     static class ListNode {
         int val;
         ListNode next;
+
         ListNode(int x) {
             val = x;
             next = null;
         }
     }
 
-	/**
-	 *
-	 * @param headA
-	 * @param headB
-	 * @return
-	 */
-	public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
-		ListNode a = headA, b = headB;
-		while (a != b) {
-			if (a != null) {
-				a = a.next;
-			} else {
-				a = headB;
-			}
-			if (b != null) {
-				b = b.next;
-			} else {
-				b = headA;
-			}
-		}
-		return a;
-	}
+    /**
+     * @param headA
+     * @param headB
+     * @return
+     */
+    public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
+        ListNode a = headA, b = headB;
+        while (a != b) {
+            if (a != null) {
+                a = a.next;
+            } else {
+                a = headB;
+            }
+            if (b != null) {
+                b = b.next;
+            } else {
+                b = headA;
+            }
+        }
+        return a;
+    }
 
     public static void main(String[] args) {
         Solution0160 solution = new Solution0160();

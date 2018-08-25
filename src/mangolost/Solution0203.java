@@ -14,17 +14,18 @@ public class Solution0203 {
 
     /**
      * Definition for singly-linked list.
-     *
-     *
      */
     static class ListNode {
         int val;
         ListNode next;
-        ListNode(int x) { val = x; }
+
+        ListNode(int x) {
+            val = x;
+        }
     }
 
     public ListNode removeElements(ListNode head, int val) {
-        while(head != null) {
+        while (head != null) {
             if (head.val == val) {
                 head = head.next;
             } else {
@@ -36,7 +37,7 @@ public class Solution0203 {
         }
 
         ListNode cur = head;
-        while(true) {
+        while (true) {
             if (cur.next == null) {
                 break;
             } else {
@@ -53,7 +54,7 @@ public class Solution0203 {
     public static void main(String[] args) {
         Solution0203 solution = new Solution0203();
 
-        int[] arr = new int[]{1,2,6,3,4,5,6};
+        int[] arr = new int[]{1, 2, 6, 3, 4, 5, 6};
         ListNode head = new ListNode(arr[0]);
         ListNode current = head;
         for (int i = 1, len = arr.length; i < len; i++) {

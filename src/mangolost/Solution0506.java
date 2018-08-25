@@ -11,7 +11,6 @@ package mangolost;
 //        N is a positive integer and won't exceed 10,000.
 //        All the scores of athletes are guaranteed to be unique.
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.Map;
 import java.util.TreeMap;
@@ -22,7 +21,6 @@ import java.util.TreeMap;
 public class Solution0506 {
 
     /**
-     *
      * @param nums
      * @return
      */
@@ -38,7 +36,7 @@ public class Solution0506 {
             for (Map.Entry m : map.entrySet()) {
                 int index = 0;
                 while (index < len) {
-                    if ((int)m.getKey() == nums[index]) {
+                    if ((int) m.getKey() == nums[index]) {
                         break;
                     }
                     index++;
@@ -65,7 +63,7 @@ public class Solution0506 {
 
     public static void main(String[] args) {
         Solution0506 solution = new Solution0506();
-        int[] nums = new int[]{1,6,4,3,8,5,9,0,7,2};
+        int[] nums = new int[]{1, 6, 4, 3, 8, 5, 9, 0, 7, 2};
         String[] result = solution.findRelativeRanks(nums);
         System.out.println(Arrays.asList(result));
     }

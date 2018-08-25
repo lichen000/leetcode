@@ -22,44 +22,44 @@ import java.util.Set;
  */
 public class Solution0202 {
 
-	/**
-	 *
-	 * @param n
-	 * @return
-	 */
-	public boolean isHappy(int n) {
-		if (n == 1) {
-			return true;
-		}
-		Set<Integer> set = new HashSet<>();
-		while (n != 1 && !set.contains(n)) {
-			set.add(n);
-			n = getNext(n);
-		}
-		return n == 1;
-	}
+    /**
+     * @param n
+     * @return
+     */
+    public boolean isHappy(int n) {
+        if (n == 1) {
+            return true;
+        }
+        Set<Integer> set = new HashSet<>();
+        while (n != 1 && !set.contains(n)) {
+            set.add(n);
+            n = getNext(n);
+        }
+        return n == 1;
+    }
 
-	/**
-	 * 输入整数各位数字的平方和
-	 * @param input a positive integer
-	 */
-	private int getNext(int input) {
-		if (input < 10) {
-			return input * input;
-		}
-		String str = String.valueOf(input);
-		int result = 0;
-		for (char x: str.toCharArray()) {
-			int temp = x - '0';
-			result += temp * temp;
-		}
-		return result;
-	}
+    /**
+     * 输入整数各位数字的平方和
+     *
+     * @param input a positive integer
+     */
+    private int getNext(int input) {
+        if (input < 10) {
+            return input * input;
+        }
+        String str = String.valueOf(input);
+        int result = 0;
+        for (char x : str.toCharArray()) {
+            int temp = x - '0';
+            result += temp * temp;
+        }
+        return result;
+    }
 
     public static void main(String[] args) {
-		Solution0202 solution0202 = new Solution0202();
+        Solution0202 solution0202 = new Solution0202();
         for (int i = 1; i <= 100; i++) {
-        	System.out.println(i + " : " + solution0202.isHappy(i));
-		}
+            System.out.println(i + " : " + solution0202.isHappy(i));
+        }
     }
 }

@@ -30,23 +30,22 @@ package mangolost;
  */
 public class Solution0171 {
 
-	/**
-	 *
-	 * @param s
-	 * @return
-	 */
-	public int titleToNumber(String s) {
-		int num = 0;
-		for (char temp : s.toCharArray()) {
-			num = num * 26 + temp - 'A' + 1;
-		}
-		return num;
-	}
+    /**
+     * @param s
+     * @return
+     */
+    public int titleToNumber(String s) {
+        int num = 0;
+        for (char temp : s.toCharArray()) {
+            num = num * 26 + temp - 'A' + 1;
+        }
+        return num;
+    }
 
-	public static void main(String[] args) {
-		Solution0171 solution = new Solution0171();
-		System.out.println(solution.titleToNumber("A"));
-		System.out.println(solution.titleToNumber("AB"));
-		System.out.println(solution.titleToNumber("ZY"));
-	}
+    public static void main(String[] args) {
+        Solution0171 solution = new Solution0171();
+        System.out.println(solution.titleToNumber("A"));
+        System.out.println(solution.titleToNumber("AB"));
+        System.out.println(solution.titleToNumber("ZY"));
+    }
 }

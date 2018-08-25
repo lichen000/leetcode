@@ -20,21 +20,20 @@ package mangolost;
  */
 public class Solution0709 {
 
-	/**
-	 *
-	 * @param str
-	 * @return
-	 */
-	public String toLowerCase(String str) {
-		StringBuilder result = new StringBuilder();
-		for (char ch: str.toCharArray()) {
-			if (ch >= 'A' && ch <= 'Z') {
-				ch += 32;
-			}
-			result.append(String.valueOf(ch));
-		}
-		return result.toString();
-	}
+    /**
+     * @param str
+     * @return
+     */
+    public String toLowerCase(String str) {
+        StringBuilder result = new StringBuilder();
+        for (char ch : str.toCharArray()) {
+            if (ch >= 'A' && ch <= 'Z') {
+                ch += 32;
+            }
+            result.append(String.valueOf(ch));
+        }
+        return result.toString();
+    }
 
     public static void main(String[] args) {
         Solution0709 solution = new Solution0709();

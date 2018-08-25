@@ -48,13 +48,12 @@ package mangolost;
 public class Solution0860 {
 
     /**
-     *
      * @param bills
      * @return
      */
     public boolean lemonadeChange(int[] bills) {
         int five = 0, ten = 0;
-        for (int bill: bills) {
+        for (int bill : bills) {
             if (bill == 5) {
                 five++;
             } else if (bill == 10) {
@@ -79,10 +78,10 @@ public class Solution0860 {
 
     public static void main(String[] args) {
         Solution0860 solution = new Solution0860();
-        int[] bills1 = {5,5,5,10,20};
-        int[] bills2 = {5,5,10};
-        int[] bills3 = {10,10};
-        int[] bills4 = {5,5,10,10,20};
+        int[] bills1 = {5, 5, 5, 10, 20};
+        int[] bills2 = {5, 5, 10};
+        int[] bills3 = {10, 10};
+        int[] bills4 = {5, 5, 10, 10, 20};
         System.out.println(solution.lemonadeChange(bills1));
         System.out.println(solution.lemonadeChange(bills2));
         System.out.println(solution.lemonadeChange(bills3));

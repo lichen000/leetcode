@@ -37,7 +37,6 @@ import java.util.Stack;
 public class Solution0020 {
 
     /**
-     *
      * @param s
      * @return
      */
@@ -49,15 +48,15 @@ public class Solution0020 {
         if (len % 2 != 0) {
             return false;
         }
-        char last = s.charAt(len-1);
+        char last = s.charAt(len - 1);
         if (last == '(' || last == '{' || last == '[') {
             return false;
         }
         Stack<Character> stack = new Stack<>();
         char temp;
-        for (int i=0; i < len; i++){
+        for (int i = 0; i < len; i++) {
             temp = s.charAt(i);
-            switch(temp) {
+            switch (temp) {
                 case '(':
                     stack.push(')');
                     break;

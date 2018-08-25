@@ -43,7 +43,6 @@ public class Solution0237 {
     }
 
     /**
-     *
      * @param node
      */
     public void deleteNode(ListNode node) {
@@ -68,7 +67,6 @@ public class Solution0237 {
     }
 
     /**
-     *
      * @param listNode
      */
     private void printListNodes(ListNode listNode) {
@@ -88,7 +86,7 @@ public class Solution0237 {
 
     public static void main(String[] args) {
         Solution0237 solution = new Solution0237();
-        int[] arr = new int[]{4,5,1,9};
+        int[] arr = new int[]{4, 5, 1, 9};
         ListNode head = solution.genListNodes(arr);
         ListNode node = head.next.next;
         solution.deleteNode(node);

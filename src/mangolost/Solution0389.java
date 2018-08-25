@@ -27,7 +27,6 @@ import java.util.Map;
 public class Solution0389 {
 
     /**
-     *
      * @param s
      * @param t
      * @return
@@ -35,7 +34,7 @@ public class Solution0389 {
     public char findTheDifference(String s, String t) {
         Map<Character, Integer> charTimes_s = new HashMap<>();
         for (Character ch : s.toCharArray()) {
-            if (charTimes_s.containsKey(ch)){
+            if (charTimes_s.containsKey(ch)) {
                 int times = charTimes_s.get(ch) + 1;
                 charTimes_s.put(ch, times);
             } else {
@@ -44,7 +43,7 @@ public class Solution0389 {
         }
         Map<Character, Integer> charTimes_t = new HashMap<>();
         for (Character ch : t.toCharArray()) {
-            if (charTimes_t.containsKey(ch)){
+            if (charTimes_t.containsKey(ch)) {
                 int times = charTimes_t.get(ch) + 1;
                 charTimes_t.put(ch, times);
             } else {
@@ -67,7 +66,7 @@ public class Solution0389 {
 
     public static void main(String[] args) {
         Solution0389 solution = new Solution0389();
-        String s = "mangolost", t= "omgoratlns";
+        String s = "mangolost", t = "omgoratlns";
         System.out.println(solution.findTheDifference(s, t));
     }
 }

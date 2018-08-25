@@ -20,7 +20,6 @@ package mangolost;
 public class Solution0088 {
 
     /**
-     *
      * @param nums1
      * @param m
      * @param nums2
@@ -53,7 +52,7 @@ public class Solution0088 {
 
     public static void main(String[] args) {
         Solution0088 solution = new Solution0088();
-        int[] nums1 = new int[]{1,2,3,0,0,0}, nums2 = new int[]{2,5,6};
+        int[] nums1 = new int[]{1, 2, 3, 0, 0, 0}, nums2 = new int[]{2, 5, 6};
         int m = 3, n = 3;
         solution.merge(nums1, m, nums2, n);
         System.out.print("[" + nums1[0]);

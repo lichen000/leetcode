@@ -23,7 +23,6 @@ package mangolost;
 public class Solution0007 {
 
     /**
-     *
      * @param x
      * @return
      */

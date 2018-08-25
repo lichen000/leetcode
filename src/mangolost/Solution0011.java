@@ -12,7 +12,6 @@ package mangolost;
 public class Solution0011 {
 
     /**
-     *
      * @param height
      * @return
      */

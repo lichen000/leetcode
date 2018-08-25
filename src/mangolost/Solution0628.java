@@ -20,7 +20,6 @@ import java.util.Arrays;
 public class Solution0628 {
 
     /**
-     *
      * @param nums
      * @return
      */
@@ -37,7 +36,7 @@ public class Solution0628 {
 
     public static void main(String[] args) {
         Solution0628 solution = new Solution0628();
-        int[] nums = new int[]{1,2,3,4};
+        int[] nums = new int[]{1, 2, 3, 4};
         System.out.println((solution.maximumProduct(nums)));
     }
 }

@@ -30,26 +30,25 @@ package mangolost;
  */
 public class Solution0168 {
 
-	/**
-	 *
-	 * @param n
-	 * @return
-	 */
-	public String convertToTitle(int n) {
-		StringBuilder x = new StringBuilder();
-		while (n != 0) {
-			int yushu = (n - 1) % 26;
-			x.insert(0, (char) ('A' + yushu));
-			n = (n - 1) / 26;
-		}
-		return x.toString();
-	}
+    /**
+     * @param n
+     * @return
+     */
+    public String convertToTitle(int n) {
+        StringBuilder x = new StringBuilder();
+        while (n != 0) {
+            int yushu = (n - 1) % 26;
+            x.insert(0, (char) ('A' + yushu));
+            n = (n - 1) / 26;
+        }
+        return x.toString();
+    }
 
-	public static void main(String[] args) {
-		Solution0168 solution = new Solution0168();
-		for (int i = 1; i < 100; i++) {
-			System.out.println(solution.convertToTitle(i));
-		}
-		System.out.println(solution.convertToTitle(701));
-	}
+    public static void main(String[] args) {
+        Solution0168 solution = new Solution0168();
+        for (int i = 1; i < 100; i++) {
+            System.out.println(solution.convertToTitle(i));
+        }
+        System.out.println(solution.convertToTitle(701));
+    }
 }

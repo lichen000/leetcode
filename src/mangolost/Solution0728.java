@@ -25,7 +25,6 @@ import java.util.List;
 public class Solution0728 {
 
     /**
-     *
      * @param left
      * @param right
      * @return
@@ -55,7 +54,7 @@ public class Solution0728 {
         int left = 1;
         int right = 10000;
         List<Integer> list = solution.selfDividingNumbers(left, right);
-        for (int x: list) {
+        for (int x : list) {
             System.out.println(x);
         }
 

@@ -15,7 +15,8 @@ package mangolost;
 //
 //        Could you optimize your algorithm to use only O(k) extra space?
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
@@ -23,7 +24,6 @@ import java.util.*;
 public class Solution0119 {
 
     /**
-     *
      * @param rowIndex
      * @return
      */

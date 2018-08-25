@@ -14,18 +14,17 @@ public class Solution0021 {
 
     /**
      * Definition for singly-linked list.
-     *
      */
     static class ListNode {
         int val;
         ListNode next;
+
         ListNode(int x) {
             val = x;
         }
     }
 
     /**
-     *
      * @param l1
      * @param l2
      * @return
@@ -49,7 +48,6 @@ public class Solution0021 {
     }
 
     /**
-     *
      * @param arr
      * @return
      */
@@ -66,7 +64,6 @@ public class Solution0021 {
     }
 
     /**
-     *
      * @param listNode
      */
     public void printListNodes(ListNode listNode) {
@@ -87,10 +84,10 @@ public class Solution0021 {
     public static void main(String[] args) {
         Solution0021 solution = new Solution0021();
 
-        int[] arr1 = new int[]{1,2,4};
+        int[] arr1 = new int[]{1, 2, 4};
         ListNode head1 = solution.genListNodes(arr1);
 
-        int[] arr2 = new int[]{1,3,4};
+        int[] arr2 = new int[]{1, 3, 4};
         ListNode head2 = solution.genListNodes(arr2);
 
         ListNode x = solution.mergeTwoLists(head1, head2);

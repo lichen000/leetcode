@@ -29,41 +29,41 @@ import java.util.Map;
  */
 public class Solution0697 {
 
-	/**
-	 * @param nums
-	 * @return
-	 */
-	public int findShortestSubArray(int[] nums) {
-		int len = nums.length;
-		if (len == 1) {
-			return 1;
-		}
-		int length = len;
-		Map<Integer, Integer> left = new HashMap<>();
-		Map<Integer, Integer> right = new HashMap<>();
-		Map<Integer, Integer> count = new HashMap<>();
-		for (int i = 0; i < len; i++) {
-			if (!left.containsKey(nums[i])) {
-				left.put(nums[i], i);
-			}
-			right.put(nums[i], i);
-			count.put(nums[i], count.getOrDefault(nums[i], 0) + 1);
-		}
-		int degree = Collections.max(count.values());
-		for (int num : nums) {
-			if (count.get(num) == degree) {
-				length = Math.min(length, right.get(num) - left.get(num) + 1);
-			}
-		}
-		return length;
-	}
+    /**
+     * @param nums
+     * @return
+     */
+    public int findShortestSubArray(int[] nums) {
+        int len = nums.length;
+        if (len == 1) {
+            return 1;
+        }
+        int length = len;
+        Map<Integer, Integer> left = new HashMap<>();
+        Map<Integer, Integer> right = new HashMap<>();
+        Map<Integer, Integer> count = new HashMap<>();
+        for (int i = 0; i < len; i++) {
+            if (!left.containsKey(nums[i])) {
+                left.put(nums[i], i);
+            }
+            right.put(nums[i], i);
+            count.put(nums[i], count.getOrDefault(nums[i], 0) + 1);
+        }
+        int degree = Collections.max(count.values());
+        for (int num : nums) {
+            if (count.get(num) == degree) {
+                length = Math.min(length, right.get(num) - left.get(num) + 1);
+            }
+        }
+        return length;
+    }
 
-	public static void main(String[] args) {
-		Solution0697 solution = new Solution0697();
-		int[] x = {1, 2, 2, 3, 1};
-		System.out.println(solution.findShortestSubArray(x));
+    public static void main(String[] args) {
+        Solution0697 solution = new Solution0697();
+        int[] x = {1, 2, 2, 3, 1};
+        System.out.println(solution.findShortestSubArray(x));
 
-		int[] y = {1, 2, 2, 3, 1, 4, 2};
-		System.out.println(solution.findShortestSubArray(y));
-	}
+        int[] y = {1, 2, 2, 3, 1, 4, 2};
+        System.out.println(solution.findShortestSubArray(y));
+    }
 }

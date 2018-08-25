@@ -13,7 +13,6 @@ package mangolost;
 public class Solution0342 {
 
     /**
-     *
      * @param num
      * @return
      */

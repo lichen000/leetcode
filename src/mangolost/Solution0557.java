@@ -31,7 +31,6 @@ public class Solution0557 {
     }
 
     /**
-     *
      * @param s
      * @return
      */

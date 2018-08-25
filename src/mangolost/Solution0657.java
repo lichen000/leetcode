@@ -30,7 +30,7 @@ public class Solution0657 {
         }
         int xPos = 0, yPos = 0;
         for (int i = 0; i < len; i++) {
-            char ch= moves.charAt(i);
+            char ch = moves.charAt(i);
             switch (ch) {
                 case 'U':
                     yPos++;
@@ -47,7 +47,7 @@ public class Solution0657 {
                 default:
             }
         }
-        return  xPos == 0 && yPos == 0;
+        return xPos == 0 && yPos == 0;
     }
 
     public static void main(String[] args) {

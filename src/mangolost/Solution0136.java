@@ -20,22 +20,21 @@ package mangolost;
  */
 public class Solution0136 {
 
-	/**
-	 *
-	 * @param nums
-	 * @return
-	 */
-	public int singleNumber(int[] nums) {
-		int result = 0;
-		for (int num : nums) {
-			result = result ^ num;
-		}
-		return result;
-	}
+    /**
+     * @param nums
+     * @return
+     */
+    public int singleNumber(int[] nums) {
+        int result = 0;
+        for (int num : nums) {
+            result = result ^ num;
+        }
+        return result;
+    }
 
     public static void main(String[] args) {
         Solution0136 solution = new Solution0136();
-        int[] nums = new int[]{4,1,2,1,2};
+        int[] nums = new int[]{4, 1, 2, 1, 2};
         System.out.println(solution.singleNumber(nums));
     }
 }

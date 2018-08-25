@@ -33,13 +33,13 @@ public class Solution0257 {
         int val;
         TreeNode left = null;
         TreeNode right = null;
+
         TreeNode(int x) {
             val = x;
         }
     }
 
     /**
-     *
      * @param root
      * @return
      */
@@ -73,7 +73,7 @@ public class Solution0257 {
         root.right.right = solution.new TreeNode(arr[6]);
 
         List<String> paths = solution.binaryTreePaths(root);
-        for (String path: paths) {
+        for (String path : paths) {
             System.out.println(path);
         }
     }

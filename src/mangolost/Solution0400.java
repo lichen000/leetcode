@@ -29,7 +29,6 @@ package mangolost;
 public class Solution0400 {
 
     /**
-     *
      * @param n
      * @return
      */
@@ -40,7 +39,7 @@ public class Solution0400 {
         int start = 1;
         int len = 1;
         long count = 9;
-        while (n > len * count){
+        while (n > len * count) {
             n -= len * count;
             len++;
             start *= 10;

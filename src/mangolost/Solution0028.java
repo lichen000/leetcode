@@ -24,7 +24,6 @@ package mangolost;
 public class Solution0028 {
 
     /**
-     *
      * @param haystack
      * @param needle
      * @return

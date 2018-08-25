@@ -28,13 +28,13 @@ public class Solution0108 {
         int val;
         TreeNode left = null;
         TreeNode right = null;
+
         TreeNode(int x) {
             val = x;
         }
     }
 
     /**
-     *
      * @param nums
      * @return
      */
@@ -46,7 +46,6 @@ public class Solution0108 {
     }
 
     /**
-     *
      * @param nums
      * @param left
      * @param right

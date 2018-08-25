@@ -11,7 +11,6 @@ package mangolost;
 public class Solution0344 {
 
     /**
-     *
      * @param s
      * @return
      */

@@ -15,31 +15,30 @@ package mangolost;
  */
 public class Solution0504 {
 
-	/**
-	 *
-	 * @param num
-	 * @return
-	 */
-	public String convertToBase7(int num) {
-		if (num < 0) {
-			return "-" + convertToBase7(-num);
-		}
-		if (num < 7) {
-			return String.valueOf(num);
-		}
-		StringBuilder result = new StringBuilder();
-		while (num > 0) {
-			int yushu = num % 7;
-			result.insert(0, String.valueOf(yushu));
-			num = num / 7;
-		}
-		return result.toString();
-	}
+    /**
+     * @param num
+     * @return
+     */
+    public String convertToBase7(int num) {
+        if (num < 0) {
+            return "-" + convertToBase7(-num);
+        }
+        if (num < 7) {
+            return String.valueOf(num);
+        }
+        StringBuilder result = new StringBuilder();
+        while (num > 0) {
+            int yushu = num % 7;
+            result.insert(0, String.valueOf(yushu));
+            num = num / 7;
+        }
+        return result.toString();
+    }
 
     public static void main(String[] args) {
         Solution0504 solution = new Solution0504();
         for (int i = 0; i <= 1000; i++) {
-        	System.out.println(i + " : " + solution.convertToBase7(i));
-		}
+            System.out.println(i + " : " + solution.convertToBase7(i));
+        }
     }
 }

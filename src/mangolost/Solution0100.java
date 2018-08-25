@@ -44,6 +44,7 @@ public class Solution0100 {
         int val;
         TreeNode left = null;
         TreeNode right = null;
+
         TreeNode(int x) {
             val = x;
         }

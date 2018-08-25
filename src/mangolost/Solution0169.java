@@ -18,32 +18,31 @@ package mangolost;
  */
 public class Solution0169 {
 
-	/**
-	 *
-	 * @param nums
-	 * @return
-	 */
-	public int majorityElement(int[] nums) {
-		if (nums.length < 3) {
-			return nums[0];
-		}
-		int result = nums[0], times = 1;
-		for (int i = 1, len = nums.length; i < len; i++) {
-			if (nums[i] == result) {
-				times++;
-			} else if (times == 0) {
-				result = nums[i];
-				times++;
-			} else {
-				times--;
-			}
-		}
-		return result;
-	}
+    /**
+     * @param nums
+     * @return
+     */
+    public int majorityElement(int[] nums) {
+        if (nums.length < 3) {
+            return nums[0];
+        }
+        int result = nums[0], times = 1;
+        for (int i = 1, len = nums.length; i < len; i++) {
+            if (nums[i] == result) {
+                times++;
+            } else if (times == 0) {
+                result = nums[i];
+                times++;
+            } else {
+                times--;
+            }
+        }
+        return result;
+    }
 
-	public static void main(String[] args) {
-		Solution0169 solution = new Solution0169();
-		int[] nums = new int[]{2,2,1,1,1,2,2};
-		System.out.println(solution.majorityElement(nums));
-	}
+    public static void main(String[] args) {
+        Solution0169 solution = new Solution0169();
+        int[] nums = new int[]{2, 2, 1, 1, 1, 2, 2};
+        System.out.println(solution.majorityElement(nums));
+    }
 }

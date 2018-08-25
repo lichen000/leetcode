@@ -32,7 +32,6 @@ import java.util.Map;
 public class Solution0290 {
 
     /**
-     *
      * @param pattern
      * @param str
      * @return

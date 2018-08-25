@@ -18,7 +18,6 @@ package mangolost;
 public class Solution0292 {
 
     /**
-     *
      * @param n
      * @return
      */

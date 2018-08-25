@@ -30,13 +30,13 @@ public class Solution0101 {
         int val;
         TreeNode left = null;
         TreeNode right = null;
+
         TreeNode(int x) {
             val = x;
         }
     }
 
     /**
-     *
      * @param left
      * @param right
      * @return
@@ -52,7 +52,6 @@ public class Solution0101 {
     }
 
     /**
-     *
      * @param root
      * @return
      */

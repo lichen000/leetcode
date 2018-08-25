@@ -30,7 +30,6 @@ import java.util.Map;
 public class Solution0205 {
 
     /**
-     *
      * @param s
      * @param t
      * @return
@@ -43,7 +42,7 @@ public class Solution0205 {
             return true;
         } else if (s.length() != t.length()) {
             return false;
-        } else if (s.length() == 1){
+        } else if (s.length() == 1) {
             return true;
         } else {
             Map<Character, Character> map = new HashMap<>();

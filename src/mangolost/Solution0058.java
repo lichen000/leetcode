@@ -16,30 +16,29 @@ package mangolost;
  */
 public class Solution0058 {
 
-	/**
-	 *
-	 * @param s
-	 * @return
-	 */
-	public int lengthOfLastWord(String s) {
-		if (s == null || s.length() == 0) {
-			return 0;
-		}
-		int len = s.length();
-		int count = 0;
-		for (int i = len - 1; i >= 0; i--) {
-			if (s.charAt(i) != ' ') {
-				count++;
-			} else if (s.charAt(i) == ' ' && count != 0) {
-				return count;
-			}
-		}
-		return count;
-	}
+    /**
+     * @param s
+     * @return
+     */
+    public int lengthOfLastWord(String s) {
+        if (s == null || s.length() == 0) {
+            return 0;
+        }
+        int len = s.length();
+        int count = 0;
+        for (int i = len - 1; i >= 0; i--) {
+            if (s.charAt(i) != ' ') {
+                count++;
+            } else if (s.charAt(i) == ' ' && count != 0) {
+                return count;
+            }
+        }
+        return count;
+    }
 
-	public static void main(String[] args) {
-		Solution0058 solution = new Solution0058();
-		String s = "Hello World";
-		System.out.println(solution.lengthOfLastWord(s));
-	}
+    public static void main(String[] args) {
+        Solution0058 solution = new Solution0058();
+        String s = "Hello World";
+        System.out.println(solution.lengthOfLastWord(s));
+    }
 }

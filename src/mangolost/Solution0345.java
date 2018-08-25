@@ -17,7 +17,6 @@ package mangolost;
 public class Solution0345 {
 
     /**
-     *
      * @param s
      * @return
      */
@@ -33,7 +32,7 @@ public class Solution0345 {
             while (left < len && !isVowel(chars[left])) {
                 left++;
             }
-            while (right >=0 && !isVowel(chars[right])) {
+            while (right >= 0 && !isVowel(chars[right])) {
                 right--;
             }
             if (left < right) {
@@ -46,14 +45,13 @@ public class Solution0345 {
                 right--;
             }
         }
-        for (char ch: chars) {
+        for (char ch : chars) {
             result.append(ch);
         }
         return result.toString();
     }
 
     /**
-     *
      * @param ch
      * @return
      */

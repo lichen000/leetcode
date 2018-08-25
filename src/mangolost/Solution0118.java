@@ -26,7 +26,6 @@ import java.util.List;
 public class Solution0118 {
 
     /**
-     *
      * @param numRows
      * @return
      */
@@ -60,7 +59,7 @@ public class Solution0118 {
         Solution0118 solution = new Solution0118();
         int numRows = 10;
         List<List<Integer>> list = solution.generate(numRows);
-        for (List<Integer> subList: list) {
+        for (List<Integer> subList : list) {
             System.out.print("[");
             for (Integer x : subList) {
                 System.out.print(x + ", ");

@@ -18,18 +18,17 @@ public class Solution0083 {
 
     /**
      * Definition for singly-linked list.
-     *
      */
     static class ListNode {
         int val;
         ListNode next;
+
         ListNode(int x) {
             val = x;
         }
     }
 
     /**
-     *
      * @param head
      * @return
      */
@@ -51,7 +50,6 @@ public class Solution0083 {
     }
 
     /**
-     *
      * @param arr
      * @return
      */
@@ -68,7 +66,6 @@ public class Solution0083 {
     }
 
     /**
-     *
      * @param listNode
      */
     public void printListNodes(ListNode listNode) {
@@ -89,7 +86,7 @@ public class Solution0083 {
     public static void main(String[] args) {
         Solution0083 solution = new Solution0083();
 
-        int[] arr = new int[]{1,1,2,3,3};
+        int[] arr = new int[]{1, 1, 2, 3, 3};
         ListNode head = solution.genListNodes(arr);
 
         ListNode y = solution.deleteDuplicates(head);

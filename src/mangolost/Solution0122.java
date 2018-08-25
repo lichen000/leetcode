@@ -32,7 +32,6 @@ package mangolost;
 public class Solution0122 {
 
     /**
-     *
      * @param prices
      * @return
      */
@@ -43,16 +42,16 @@ public class Solution0122 {
         int min = Integer.MAX_VALUE, result = 0;
         for (int price : prices) {
             if (min < price) {
-				result += price - min;
+                result += price - min;
             }
-			min = price;
+            min = price;
         }
         return result;
-	}
+    }
 
     public static void main(String[] args) {
         Solution0122 solution = new Solution0122();
-        int[] prices = new int[]{7,1,5,3,6,4};
+        int[] prices = new int[]{7, 1, 5, 3, 6, 4};
         System.out.println(solution.maxProfit(prices));
     }
 }

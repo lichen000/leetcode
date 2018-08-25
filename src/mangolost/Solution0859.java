@@ -35,7 +35,6 @@ package mangolost;
 public class Solution0859 {
 
     /**
-     *
      * @param A
      * @param B
      * @return
@@ -50,7 +49,7 @@ public class Solution0859 {
             for (int i = 0; i < len_A; i++) {
                 counts[A.charAt(i) - 'a']++;
             }
-            for (int count: counts) {
+            for (int count : counts) {
                 if (count > 1) {
                     return true;
                 }

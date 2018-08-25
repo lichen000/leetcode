@@ -28,7 +28,6 @@ package mangolost;
 public class Solution0414 {
 
     /**
-     *
      * @param nums
      * @return
      */
@@ -54,9 +53,9 @@ public class Solution0414 {
             }
         }
         if (third == second || third == Long.MIN_VALUE) {
-            return (int)first;
+            return (int) first;
         } else {
-            return (int)third;
+            return (int) third;
         }
     }
 

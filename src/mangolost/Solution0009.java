@@ -26,7 +26,6 @@ import java.util.List;
 public class Solution0009 {
 
     /**
-     *
      * @param x
      * @return
      */

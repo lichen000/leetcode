@@ -17,9 +17,7 @@ package mangolost;
 //        S and J will consist of letters and have length at most 50.
 //        The characters in J are distinct.
 
-import java.util.HashMap;
 import java.util.HashSet;
-import java.util.Map;
 import java.util.Set;
 
 /**
@@ -28,7 +26,6 @@ import java.util.Set;
 public class Solution0771 {
 
     /**
-     *
      * @param J
      * @param S
      * @return

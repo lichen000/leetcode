@@ -18,34 +18,33 @@ import java.util.Set;
  */
 public class Solution0003 {
 
-	/**
-	 *
-	 * @param s
-	 * @return
-	 */
-	public int lengthOfLongestSubstring(String s) {
-		int len = s.length();
-		if (len < 2) {
-			return len;
-		}
-		int result = 0, left = 0, right = 0;
-		Set<Character> set = new HashSet<>();
-		while (right < len) {
-			char ch = s.charAt(right);
-			if (set.contains(ch)) {
-				set.remove(s.charAt(left));
-				left++;
-			} else {
-				set.add(ch);
-				right++;
-				int size = set.size();
-				if (size > result) {
-					result = size;
-				}
-			}
-		}
-		return result;
-	}
+    /**
+     * @param s
+     * @return
+     */
+    public int lengthOfLongestSubstring(String s) {
+        int len = s.length();
+        if (len < 2) {
+            return len;
+        }
+        int result = 0, left = 0, right = 0;
+        Set<Character> set = new HashSet<>();
+        while (right < len) {
+            char ch = s.charAt(right);
+            if (set.contains(ch)) {
+                set.remove(s.charAt(left));
+                left++;
+            } else {
+                set.add(ch);
+                right++;
+                int size = set.size();
+                if (size > result) {
+                    result = size;
+                }
+            }
+        }
+        return result;
+    }
 
     public static void main(String[] args) {
         Solution0003 solution = new Solution0003();

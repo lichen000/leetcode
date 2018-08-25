@@ -25,7 +25,6 @@ package mangolost;
 public class Solution0013 {
 
     /**
-     *
      * @param c
      * @return
      */
@@ -51,7 +50,6 @@ public class Solution0013 {
     }
 
     /**
-     *
      * @param s
      * @return
      */

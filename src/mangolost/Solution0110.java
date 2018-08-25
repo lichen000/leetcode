@@ -42,13 +42,13 @@ public class Solution0110 {
         int val;
         TreeNode left = null;
         TreeNode right = null;
+
         TreeNode(int x) {
             val = x;
         }
     }
 
     /**
-     *
      * @param root
      * @return
      */
@@ -67,6 +67,7 @@ public class Solution0110 {
 
     /**
      * calculate the depth of a binary tree
+     *
      * @param node
      * @return
      */
