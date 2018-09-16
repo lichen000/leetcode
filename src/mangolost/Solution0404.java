@@ -31,7 +31,6 @@ public class Solution0404 {
     }
 
     /**
-     *
      * @param root
      * @return
      */

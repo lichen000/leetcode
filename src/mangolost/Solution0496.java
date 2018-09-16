@@ -55,7 +55,7 @@ public class Solution0496 {
 
     public static void main(String[] args) {
         Solution0496 solution = new Solution0496();
-        int[] nums1 = {1,9,8,7,0,7,1,5}, nums2 = {1,9,9,3,0,7,1,6};
+        int[] nums1 = {1, 9, 8, 7, 0, 7, 1, 5}, nums2 = {1, 9, 9, 3, 0, 7, 1, 6};
         int[] result = solution.nextGreaterElement(nums1, nums2);
         System.out.println(Arrays.toString(result));
     }
