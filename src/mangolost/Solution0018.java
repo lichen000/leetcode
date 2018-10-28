@@ -27,7 +27,6 @@ import java.util.List;
 public class Solution0018 {
 
     /**
-     *
      * @param nums
      * @param target
      * @return
@@ -75,7 +74,7 @@ public class Solution0018 {
         int target = 25;
         List<List<Integer>> list = solution.fourSum(nums, target);
         for (List<Integer> subList : list) {
-            for (Integer x: subList) {
+            for (Integer x : subList) {
                 System.out.print(x);
                 System.out.print(" ");
             }

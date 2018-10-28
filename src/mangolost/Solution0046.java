@@ -46,7 +46,6 @@ public class Solution0046 {
     }
 
     /**
-     *
      * @param nums
      * @param list
      * @param result

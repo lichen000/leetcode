@@ -8,7 +8,7 @@ package mangolost;
 //
 //        The sum that is closest to the target is 2. (-1 + 2 + 1 = 2).
 
-import java.util.*;
+import java.util.Arrays;
 
 /**
  *
@@ -16,7 +16,6 @@ import java.util.*;
 public class Solution0016 {
 
     /**
-     *
      * @param nums
      * @param target
      * @return
