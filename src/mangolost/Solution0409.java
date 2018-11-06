@@ -23,32 +23,32 @@ package mangolost;
  */
 public class Solution0409 {
 
-    /**
-     * @param s
-     * @return
-     */
-    public int longestPalindrome(String s) {
-        int len = s.length();
-        if (len < 2) {
-            return len;
-        }
-        boolean[] arr = new boolean[256];
-        int result = 0;
-        for (char c : s.toCharArray()) {
-            arr[c] = !arr[c];
-            if (!arr[c]) {
-                result += 2;
-            }
-        }
-        if (result < len) {
-            result++;
-        }
-        return result;
-    }
+	/**
+	 * @param s
+	 * @return
+	 */
+	public int longestPalindrome(String s) {
+		int len = s.length();
+		if (len < 2) {
+			return len;
+		}
+		boolean[] arr = new boolean[256];
+		int result = 0;
+		for (char c : s.toCharArray()) {
+			arr[c] = !arr[c];
+			if (!arr[c]) {
+				result += 2;
+			}
+		}
+		if (result < len) {
+			result++;
+		}
+		return result;
+	}
 
-    public static void main(String[] args) {
-        Solution0409 solution = new Solution0409();
-        String s = "abccccdd";
-        System.out.println(solution.longestPalindrome(s));
-    }
+	public static void main(String[] args) {
+		Solution0409 solution = new Solution0409();
+		String s = "abccccdd";
+		System.out.println(solution.longestPalindrome(s));
+	}
 }

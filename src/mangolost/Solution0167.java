@@ -1,6 +1,6 @@
 package mangolost;
 
-//Given an array of integers that is already sorted in ascending order, find two numbers such that they add up to a specific target number.
+//Given an array of integers that is already sorted in ascending order, find two numbers such that they add up to a specific target checkNumber.
 //
 //		The function twoSum should return indices of the two numbers such that they add up to the target, where index1 must be less than index2.
 //
@@ -19,36 +19,36 @@ package mangolost;
  */
 public class Solution0167 {
 
-    /**
-     * @param numbers
-     * @param target
-     * @return
-     */
-    public int[] twoSum(int[] numbers, int target) {
-        if (numbers == null || numbers.length < 2) {
-            return null;
-        }
-        int i = 0, j = numbers.length - 1;
-        while (i < j) {
-            int x = numbers[i] + numbers[j];
-            if (x < target) {
-                i++;
-            } else if (x > target) {
-                j--;
-            } else {
-                return new int[]{i + 1, j + 1};
-            }
-        }
-        return null;
-    }
+	/**
+	 * @param numbers
+	 * @param target
+	 * @return
+	 */
+	public int[] twoSum(int[] numbers, int target) {
+		if (numbers == null || numbers.length < 2) {
+			return null;
+		}
+		int i = 0, j = numbers.length - 1;
+		while (i < j) {
+			int x = numbers[i] + numbers[j];
+			if (x < target) {
+				i++;
+			} else if (x > target) {
+				j--;
+			} else {
+				return new int[]{i + 1, j + 1};
+			}
+		}
+		return null;
+	}
 
-    public static void main(String[] args) {
-        Solution0167 solution = new Solution0167();
-        int[] nums = new int[]{2, 7, 11, 15};
-        int target = 9;
-        int[] result = solution.twoSum(nums, target);
-        for (int x : result) {
-            System.out.print(x + " ");
-        }
-    }
+	public static void main(String[] args) {
+		Solution0167 solution = new Solution0167();
+		int[] nums = new int[]{2, 7, 11, 15};
+		int target = 9;
+		int[] result = solution.twoSum(nums, target);
+		for (int x : result) {
+			System.out.print(x + " ");
+		}
+	}
 }

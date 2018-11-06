@@ -28,40 +28,40 @@ package mangolost;
  */
 public class Solution0038 {
 
-    /**
-     * @param n
-     * @return
-     */
-    public String countAndSay(int n) {
-        if (n == 1) {
-            return "1";
-        } else {
-            String pre = countAndSay(n - 1);
-            int len = pre.length();
-            StringBuilder result = new StringBuilder();
-            char currentChar = pre.charAt(0);
-            int currentTimes = 1;
-            String part = String.valueOf(currentTimes) + String.valueOf(currentChar);
-            for (int i = 1; i < len; i++) {
-                char tempChar = pre.charAt(i);
-                if (currentChar == tempChar) {
-                    currentTimes++;
-                } else {
-                    result.append(part);
-                    currentChar = tempChar;
-                    currentTimes = 1;
-                }
-                part = String.valueOf(currentTimes) + String.valueOf(currentChar);
-            }
-            result.append(part);
-            return result.toString();
-        }
-    }
+	/**
+	 * @param n
+	 * @return
+	 */
+	public String countAndSay(int n) {
+		if (n == 1) {
+			return "1";
+		} else {
+			String pre = countAndSay(n - 1);
+			int len = pre.length();
+			StringBuilder result = new StringBuilder();
+			char currentChar = pre.charAt(0);
+			int currentTimes = 1;
+			String part = String.valueOf(currentTimes) + String.valueOf(currentChar);
+			for (int i = 1; i < len; i++) {
+				char tempChar = pre.charAt(i);
+				if (currentChar == tempChar) {
+					currentTimes++;
+				} else {
+					result.append(part);
+					currentChar = tempChar;
+					currentTimes = 1;
+				}
+				part = String.valueOf(currentTimes) + String.valueOf(currentChar);
+			}
+			result.append(part);
+			return result.toString();
+		}
+	}
 
-    public static void main(String[] args) {
-        Solution0038 solution = new Solution0038();
-        for (int i = 1; i < 50; i++) {
-            System.out.println(solution.countAndSay(i));
-        }
-    }
+	public static void main(String[] args) {
+		Solution0038 solution = new Solution0038();
+		for (int i = 1; i < 50; i++) {
+			System.out.println(solution.countAndSay(i));
+		}
+	}
 }

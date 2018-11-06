@@ -19,24 +19,24 @@ import java.util.Arrays;
  */
 public class Solution0628 {
 
-    /**
-     * @param nums
-     * @return
-     */
-    public int maximumProduct(int[] nums) {
-        if (nums == null || nums.length == 0) {
-            return 0;
-        }
-        Arrays.sort(nums);
-        int len = nums.length;
-        int a = nums[len - 1] * nums[len - 2] * nums[len - 3];
-        int b = nums[0] * nums[1] * nums[len - 1];
-        return a > b ? a : b;
-    }
+	/**
+	 * @param nums
+	 * @return
+	 */
+	public int maximumProduct(int[] nums) {
+		if (nums == null || nums.length == 0) {
+			return 0;
+		}
+		Arrays.sort(nums);
+		int len = nums.length;
+		int a = nums[len - 1] * nums[len - 2] * nums[len - 3];
+		int b = nums[0] * nums[1] * nums[len - 1];
+		return a > b ? a : b;
+	}
 
-    public static void main(String[] args) {
-        Solution0628 solution = new Solution0628();
-        int[] nums = new int[]{1, 2, 3, 4};
-        System.out.println((solution.maximumProduct(nums)));
-    }
+	public static void main(String[] args) {
+		Solution0628 solution = new Solution0628();
+		int[] nums = new int[]{1, 2, 3, 4};
+		System.out.println((solution.maximumProduct(nums)));
+	}
 }

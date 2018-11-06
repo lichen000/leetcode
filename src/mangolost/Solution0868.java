@@ -46,27 +46,27 @@ package mangolost;
  */
 public class Solution0868 {
 
-    /**
-     * @param N
-     * @return
-     */
-    public int binaryGap(int N) {
-        int res = 0, pre = -1;
-        for (int i = 0; i < 32; i++) {
-            if ((N & (1 << i)) != 0) {
-                if (pre != -1) {
-                    res = Math.max(res, i - pre);
-                }
-                pre = i;
-            }
-        }
-        return res;
-    }
+	/**
+	 * @param N
+	 * @return
+	 */
+	public int binaryGap(int N) {
+		int res = 0, pre = -1;
+		for (int i = 0; i < 32; i++) {
+			if ((N & (1 << i)) != 0) {
+				if (pre != -1) {
+					res = Math.max(res, i - pre);
+				}
+				pre = i;
+			}
+		}
+		return res;
+	}
 
-    public static void main(String[] args) {
-        Solution0868 solution = new Solution0868();
-        for (int i = 1; i <= 1000; i++) {
-            System.out.println(i + " : " + solution.binaryGap(i));
-        }
-    }
+	public static void main(String[] args) {
+		Solution0868 solution = new Solution0868();
+		for (int i = 1; i <= 1000; i++) {
+			System.out.println(i + " : " + solution.binaryGap(i));
+		}
+	}
 }

@@ -46,42 +46,42 @@ import java.util.Set;
  */
 public class Solution0888 {
 
-    /**
-     * @param A
-     * @param B
-     * @return
-     */
-    public int[] fairCandySwap(int[] A, int[] B) {
-        int totalA = 0, totalB = 0;
-        for (int x : A) {
-            totalA += x;
-        }
-        for (int x : B) {
-            totalB += x;
-        }
-        int gap = (totalB - totalA) / 2;
-        Set<Integer> setB = new HashSet<>();
-        for (int x : B) {
-            setB.add(x);
-        }
-        for (int x : A) {
-            int temp = x + gap;
-            if (setB.contains(temp)) {
-                return new int[]{x, temp};
-            }
-        }
-        return null;
-    }
+	/**
+	 * @param A
+	 * @param B
+	 * @return
+	 */
+	public int[] fairCandySwap(int[] A, int[] B) {
+		int totalA = 0, totalB = 0;
+		for (int x : A) {
+			totalA += x;
+		}
+		for (int x : B) {
+			totalB += x;
+		}
+		int gap = (totalB - totalA) / 2;
+		Set<Integer> setB = new HashSet<>();
+		for (int x : B) {
+			setB.add(x);
+		}
+		for (int x : A) {
+			int temp = x + gap;
+			if (setB.contains(temp)) {
+				return new int[]{x, temp};
+			}
+		}
+		return null;
+	}
 
-    public static void main(String[] args) {
-        Solution0888 solution = new Solution0888();
-        int[] A1 = {1, 1}, B1 = {2, 2};
-        int[] A2 = {1, 2}, B2 = {2, 3};
-        int[] A3 = {2}, B3 = {1, 3};
-        int[] A4 = {1, 2, 5}, B4 = {2, 4};
-        System.out.println(Arrays.toString(solution.fairCandySwap(A1, B1)));
-        System.out.println(Arrays.toString(solution.fairCandySwap(A2, B2)));
-        System.out.println(Arrays.toString(solution.fairCandySwap(A3, B3)));
-        System.out.println(Arrays.toString(solution.fairCandySwap(A4, B4)));
-    }
+	public static void main(String[] args) {
+		Solution0888 solution = new Solution0888();
+		int[] A1 = {1, 1}, B1 = {2, 2};
+		int[] A2 = {1, 2}, B2 = {2, 3};
+		int[] A3 = {2}, B3 = {1, 3};
+		int[] A4 = {1, 2, 5}, B4 = {2, 4};
+		System.out.println(Arrays.toString(solution.fairCandySwap(A1, B1)));
+		System.out.println(Arrays.toString(solution.fairCandySwap(A2, B2)));
+		System.out.println(Arrays.toString(solution.fairCandySwap(A3, B3)));
+		System.out.println(Arrays.toString(solution.fairCandySwap(A4, B4)));
+	}
 }

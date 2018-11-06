@@ -26,59 +26,59 @@ import java.util.List;
  */
 public class Solution0018 {
 
-    /**
-     * @param nums
-     * @param target
-     * @return
-     */
-    public List<List<Integer>> fourSum(int[] nums, int target) {
-        List<List<Integer>> list = new ArrayList<>();
-        Arrays.sort(nums);
-        int len = nums.length;
-        for (int i = 0; i < len; i++) {
-            if (i > 0 && nums[i] == nums[i - 1]) {
-                continue;
-            }
-            for (int j = i + 1; j < len; j++) {
-                if (j > i + 1 && nums[j] == nums[j - 1]) {
-                    continue;
-                }
-                int left = j + 1;
-                int right = len - 1;
-                while (left < right) {
-                    int sum = nums[i] + nums[j] + nums[left] + nums[right];
-                    if (sum == target) {
-                        list.add(Arrays.asList(nums[i], nums[j], nums[left], nums[right]));
-                        while (left < right && nums[left] == nums[left + 1]) {
-                            left++;
-                        }
-                        while (left < right && nums[right] == nums[right - 1]) {
-                            right--;
-                        }
-                        left++;
-                        right--;
-                    } else if (sum < target) {
-                        left++;
-                    } else {
-                        right--;
-                    }
-                }
-            }
-        }
-        return list;
-    }
+	/**
+	 * @param nums
+	 * @param target
+	 * @return
+	 */
+	public List<List<Integer>> fourSum(int[] nums, int target) {
+		List<List<Integer>> list = new ArrayList<>();
+		Arrays.sort(nums);
+		int len = nums.length;
+		for (int i = 0; i < len; i++) {
+			if (i > 0 && nums[i] == nums[i - 1]) {
+				continue;
+			}
+			for (int j = i + 1; j < len; j++) {
+				if (j > i + 1 && nums[j] == nums[j - 1]) {
+					continue;
+				}
+				int left = j + 1;
+				int right = len - 1;
+				while (left < right) {
+					int sum = nums[i] + nums[j] + nums[left] + nums[right];
+					if (sum == target) {
+						list.add(Arrays.asList(nums[i], nums[j], nums[left], nums[right]));
+						while (left < right && nums[left] == nums[left + 1]) {
+							left++;
+						}
+						while (left < right && nums[right] == nums[right - 1]) {
+							right--;
+						}
+						left++;
+						right--;
+					} else if (sum < target) {
+						left++;
+					} else {
+						right--;
+					}
+				}
+			}
+		}
+		return list;
+	}
 
-    public static void main(String[] args) {
-        Solution0018 solution = new Solution0018();
-        int[] nums = {1, 9, 9, 3, 0, 7, 1, 6};
-        int target = 25;
-        List<List<Integer>> list = solution.fourSum(nums, target);
-        for (List<Integer> subList : list) {
-            for (Integer x : subList) {
-                System.out.print(x);
-                System.out.print(" ");
-            }
-            System.out.println();
-        }
-    }
+	public static void main(String[] args) {
+		Solution0018 solution = new Solution0018();
+		int[] nums = {1, 9, 9, 3, 0, 7, 1, 6};
+		int target = 25;
+		List<List<Integer>> list = solution.fourSum(nums, target);
+		for (List<Integer> subList : list) {
+			for (Integer x : subList) {
+				System.out.print(x);
+				System.out.print(" ");
+			}
+			System.out.println();
+		}
+	}
 }

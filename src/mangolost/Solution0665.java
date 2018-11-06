@@ -19,41 +19,41 @@ package mangolost;
  */
 public class Solution0665 {
 
-    /**
-     * @param nums
-     * @return
-     */
-    public boolean checkPossibility(int[] nums) {
-        int len = nums.length;
-        if (len < 3) {
-            return true;
-        }
-        boolean hasModified = false;
-        for (int i = 0; i < len - 1; i++) {
-            if (nums[i] > nums[i + 1]) {
-                if (hasModified) {
-                    return false;
-                } else {
-                    if (i == 0 || nums[i + 1] >= nums[i - 1]) {
-                        nums[i] = nums[i + 1];
-                    } else {
-                        nums[i + 1] = nums[i];
-                    }
-                    hasModified = true;
-                }
-            }
-        }
-        return true;
-    }
+	/**
+	 * @param nums
+	 * @return
+	 */
+	public boolean checkPossibility(int[] nums) {
+		int len = nums.length;
+		if (len < 3) {
+			return true;
+		}
+		boolean hasModified = false;
+		for (int i = 0; i < len - 1; i++) {
+			if (nums[i] > nums[i + 1]) {
+				if (hasModified) {
+					return false;
+				} else {
+					if (i == 0 || nums[i + 1] >= nums[i - 1]) {
+						nums[i] = nums[i + 1];
+					} else {
+						nums[i + 1] = nums[i];
+					}
+					hasModified = true;
+				}
+			}
+		}
+		return true;
+	}
 
-    public static void main(String[] args) {
-        Solution0665 solution = new Solution0665();
-        int[] nums = new int[]{4, 2, 3};
-        System.out.println(solution.checkPossibility(nums));
+	public static void main(String[] args) {
+		Solution0665 solution = new Solution0665();
+		int[] nums = new int[]{4, 2, 3};
+		System.out.println(solution.checkPossibility(nums));
 
-        int[] nums2 = new int[]{4, 2, 1};
-        System.out.println(solution.checkPossibility(nums2));
+		int[] nums2 = new int[]{4, 2, 1};
+		System.out.println(solution.checkPossibility(nums2));
 
 
-    }
+	}
 }

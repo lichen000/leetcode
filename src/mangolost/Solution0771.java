@@ -25,38 +25,38 @@ import java.util.Set;
  */
 public class Solution0771 {
 
-    /**
-     * @param J
-     * @param S
-     * @return
-     */
-    public int numJewelsInStones(String J, String S) {
-        int len_j = J.length();
-        int len_s = S.length();
-        if (len_j == 0 || len_s == 0) {
-            return 0;
-        }
-        int result = 0;
-        Set<Character> set = new HashSet<>();
-        for (int i = 0; i < len_j; i++) {
-            set.add(J.charAt(i));
-        }
-        for (int i = 0; i < len_s; i++) {
-            if (set.contains(S.charAt(i))) {
-                result++;
-            }
-        }
-        return result;
-    }
+	/**
+	 * @param J
+	 * @param S
+	 * @return
+	 */
+	public int numJewelsInStones(String J, String S) {
+		int len_j = J.length();
+		int len_s = S.length();
+		if (len_j == 0 || len_s == 0) {
+			return 0;
+		}
+		int result = 0;
+		Set<Character> set = new HashSet<>();
+		for (int i = 0; i < len_j; i++) {
+			set.add(J.charAt(i));
+		}
+		for (int i = 0; i < len_s; i++) {
+			if (set.contains(S.charAt(i))) {
+				result++;
+			}
+		}
+		return result;
+	}
 
-    public static void main(String[] args) {
-        Solution0771 solution = new Solution0771();
-        String J = "aA", S = "aAAbbbb";
-        System.out.println(solution.numJewelsInStones(J, S));
+	public static void main(String[] args) {
+		Solution0771 solution = new Solution0771();
+		String J = "aA", S = "aAAbbbb";
+		System.out.println(solution.numJewelsInStones(J, S));
 
-        String J2 = "z", S2 = "ZZ";
-        System.out.println(solution.numJewelsInStones(J2, S2));
+		String J2 = "z", S2 = "ZZ";
+		System.out.println(solution.numJewelsInStones(J2, S2));
 
 
-    }
+	}
 }

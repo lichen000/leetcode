@@ -34,34 +34,34 @@ import java.util.*;
  */
 public class Solution0819 {
 
-    /**
-     * @param paragraph
-     * @param banned
-     * @return
-     */
-    public String mostCommonWord(String paragraph, String[] banned) {
-        Set<String> banSet = new HashSet<>(Arrays.asList(banned));
-        Map<String, Integer> count = new HashMap<>();
-        String[] words = paragraph.replaceAll("\\pP", " ").toLowerCase().split("\\s+");
-        String result = "";
-        int max = 0;
-        for (String w : words) {
-            if (!banSet.contains(w)) {
-                count.put(w, count.getOrDefault(w, 0) + 1);
-                if (count.get(w) > max) {
-                    result = w;
-                    max = count.get(w);
-                }
-            }
-        }
-        return result;
-    }
+	/**
+	 * @param paragraph
+	 * @param banned
+	 * @return
+	 */
+	public String mostCommonWord(String paragraph, String[] banned) {
+		Set<String> banSet = new HashSet<>(Arrays.asList(banned));
+		Map<String, Integer> count = new HashMap<>();
+		String[] words = paragraph.replaceAll("\\pP", " ").toLowerCase().split("\\s+");
+		String result = "";
+		int max = 0;
+		for (String w : words) {
+			if (!banSet.contains(w)) {
+				count.put(w, count.getOrDefault(w, 0) + 1);
+				if (count.get(w) > max) {
+					result = w;
+					max = count.get(w);
+				}
+			}
+		}
+		return result;
+	}
 
-    public static void main(String[] args) {
-        Solution0819 solution = new Solution0819();
-        String paragraph = "Bob hit a ball, the hit BALL flew far after it was hit.";
-        String[] banned = new String[]{"hit"};
-        String result = solution.mostCommonWord(paragraph, banned);
-        System.out.println(result);
-    }
+	public static void main(String[] args) {
+		Solution0819 solution = new Solution0819();
+		String paragraph = "Bob hit a ball, the hit BALL flew far after it was hit.";
+		String[] banned = new String[]{"hit"};
+		String result = solution.mostCommonWord(paragraph, banned);
+		System.out.println(result);
+	}
 }

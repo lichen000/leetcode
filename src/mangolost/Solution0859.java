@@ -34,46 +34,46 @@ package mangolost;
  */
 public class Solution0859 {
 
-    /**
-     * @param A
-     * @param B
-     * @return
-     */
-    public boolean buddyStrings(String A, String B) {
-        int len_A = A.length(), len_B = B.length();
-        if (len_A < 2 || len_B < 2 || len_A != len_B) {
-            return false;
-        }
-        if (A.equals(B)) {
-            int[] counts = new int[26];
-            for (int i = 0; i < len_A; i++) {
-                counts[A.charAt(i) - 'a']++;
-            }
-            for (int count : counts) {
-                if (count > 1) {
-                    return true;
-                }
-            }
-            return false;
-        } else {
-            int first = -1, second = -1;
-            for (int i = 0; i < len_A; i++) {
-                if (A.charAt(i) != B.charAt(i)) {
-                    if (first == -1) {
-                        first = i;
-                    } else if (second == -1) {
-                        second = i;
-                    } else {
-                        return false;
-                    }
-                }
-            }
-            return second != -1 && A.charAt(first) == B.charAt(second) && A.charAt(second) == B.charAt(first);
-        }
-    }
+	/**
+	 * @param A
+	 * @param B
+	 * @return
+	 */
+	public boolean buddyStrings(String A, String B) {
+		int len_A = A.length(), len_B = B.length();
+		if (len_A < 2 || len_B < 2 || len_A != len_B) {
+			return false;
+		}
+		if (A.equals(B)) {
+			int[] counts = new int[26];
+			for (int i = 0; i < len_A; i++) {
+				counts[A.charAt(i) - 'a']++;
+			}
+			for (int count : counts) {
+				if (count > 1) {
+					return true;
+				}
+			}
+			return false;
+		} else {
+			int first = -1, second = -1;
+			for (int i = 0; i < len_A; i++) {
+				if (A.charAt(i) != B.charAt(i)) {
+					if (first == -1) {
+						first = i;
+					} else if (second == -1) {
+						second = i;
+					} else {
+						return false;
+					}
+				}
+			}
+			return second != -1 && A.charAt(first) == B.charAt(second) && A.charAt(second) == B.charAt(first);
+		}
+	}
 
-    public static void main(String[] args) {
-        Solution0859 solution = new Solution0859();
-        System.out.println(solution.buddyStrings("reainll", "mangolost"));
-    }
+	public static void main(String[] args) {
+		Solution0859 solution = new Solution0859();
+		System.out.println(solution.buddyStrings("reainll", "mangolost"));
+	}
 }

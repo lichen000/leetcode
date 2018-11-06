@@ -21,36 +21,36 @@ import java.util.Arrays;
  */
 public class Solution0821 {
 
-    /**
-     * @param S
-     * @param C
-     * @return
-     */
-    public int[] shortestToChar(String S, char C) {
-        int len = S.length();
-        int[] result = new int[len];
-        int forward = Integer.MIN_VALUE;
-        for (int i = 0; i < len; i++) {
-            if (S.charAt(i) == C) {
-                forward = i;
-            }
-            result[i] = i - forward;
-        }
-        int backward = Integer.MAX_VALUE;
-        for (int i = len - 1; i >= 0; i--) {
-            if (S.charAt(i) == C) {
-                backward = i;
-            }
-            result[i] = Math.min(result[i], backward - i);
-        }
-        return result;
-    }
+	/**
+	 * @param S
+	 * @param C
+	 * @return
+	 */
+	public int[] shortestToChar(String S, char C) {
+		int len = S.length();
+		int[] result = new int[len];
+		int forward = Integer.MIN_VALUE;
+		for (int i = 0; i < len; i++) {
+			if (S.charAt(i) == C) {
+				forward = i;
+			}
+			result[i] = i - forward;
+		}
+		int backward = Integer.MAX_VALUE;
+		for (int i = len - 1; i >= 0; i--) {
+			if (S.charAt(i) == C) {
+				backward = i;
+			}
+			result[i] = Math.min(result[i], backward - i);
+		}
+		return result;
+	}
 
-    public static void main(String[] args) {
-        Solution0821 solution = new Solution0821();
-        String S = "ljlreainll";
-        char C = 'l';
-        int[] result = solution.shortestToChar(S, C);
-        System.out.println(Arrays.toString(result));
-    }
+	public static void main(String[] args) {
+		Solution0821 solution = new Solution0821();
+		String S = "ljlreainll";
+		char C = 'l';
+		int[] result = solution.shortestToChar(S, C);
+		System.out.println(Arrays.toString(result));
+	}
 }

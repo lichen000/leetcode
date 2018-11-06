@@ -31,27 +31,27 @@ package mangolost;
  */
 public class Solution0122 {
 
-    /**
-     * @param prices
-     * @return
-     */
-    public int maxProfit(int[] prices) {
-        if (prices == null || prices.length < 2) {
-            return 0;
-        }
-        int min = Integer.MAX_VALUE, result = 0;
-        for (int price : prices) {
-            if (min < price) {
-                result += price - min;
-            }
-            min = price;
-        }
-        return result;
-    }
+	/**
+	 * @param prices
+	 * @return
+	 */
+	public int maxProfit(int[] prices) {
+		if (prices == null || prices.length < 2) {
+			return 0;
+		}
+		int min = Integer.MAX_VALUE, result = 0;
+		for (int price : prices) {
+			if (min < price) {
+				result += price - min;
+			}
+			min = price;
+		}
+		return result;
+	}
 
-    public static void main(String[] args) {
-        Solution0122 solution = new Solution0122();
-        int[] prices = new int[]{7, 1, 5, 3, 6, 4};
-        System.out.println(solution.maxProfit(prices));
-    }
+	public static void main(String[] args) {
+		Solution0122 solution = new Solution0122();
+		int[] prices = new int[]{7, 1, 5, 3, 6, 4};
+		System.out.println(solution.maxProfit(prices));
+	}
 }

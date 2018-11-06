@@ -18,38 +18,38 @@ package mangolost;
  */
 public class Solution0067 {
 
-    /**
-     * @param a
-     * @param b
-     * @return
-     */
-    public String addBinary(String a, String b) {
-        if (a.length() < b.length()) {
-            String temp = a;
-            a = b;
-            b = temp;
-        }
-        int len_a = a.length();
-        int len_b = b.length();
-        int carry = 0, temp = 0;
-        String result = "";
-        for (int i = 0; i < len_a; i++) {
-            int p = a.charAt(len_a - 1 - i) - '0';
-            int q = (i < len_b) ? b.charAt(len_b - 1 - i) - '0' : 0;
-            temp = p + q + carry;
-            carry = temp / 2;
-            result = temp % 2 + result;
-        }
-        if (carry == 0) {
-            return result;
-        } else {
-            return "1" + result;
-        }
-    }
+	/**
+	 * @param a
+	 * @param b
+	 * @return
+	 */
+	public String addBinary(String a, String b) {
+		if (a.length() < b.length()) {
+			String temp = a;
+			a = b;
+			b = temp;
+		}
+		int len_a = a.length();
+		int len_b = b.length();
+		int carry = 0, temp = 0;
+		String result = "";
+		for (int i = 0; i < len_a; i++) {
+			int p = a.charAt(len_a - 1 - i) - '0';
+			int q = (i < len_b) ? b.charAt(len_b - 1 - i) - '0' : 0;
+			temp = p + q + carry;
+			carry = temp / 2;
+			result = temp % 2 + result;
+		}
+		if (carry == 0) {
+			return result;
+		} else {
+			return "1" + result;
+		}
+	}
 
-    public static void main(String[] args) {
-        Solution0067 solution = new Solution0067();
-        String a = "1010", b = "1011";
-        System.out.println(solution.addBinary(a, b));
-    }
+	public static void main(String[] args) {
+		Solution0067 solution = new Solution0067();
+		String a = "1010", b = "1011";
+		System.out.println(solution.addBinary(a, b));
+	}
 }

@@ -1,6 +1,6 @@
 package mangolost;
 
-//Given an integer n, return the number of trailing zeroes in n!.
+//Given an integer n, return the checkNumber of trailing zeroes in n!.
 //
 //        Example 1:
 //
@@ -19,30 +19,30 @@ package mangolost;
  */
 public class Solution0172 {
 
-    /**
-     * @param n
-     * @return
-     */
-    public int trailingZeroes(int n) {
-        if (n < 5) {
-            return 0;
-        } else if (n == 5) {
-            return 1;
-        } else {
-            int count = 0;
-            while (n > 0) {
-                int temp = n / 5;
-                count = count + temp;
-                n = temp;
-            }
-            return count;
-        }
-    }
+	/**
+	 * @param n
+	 * @return
+	 */
+	public int trailingZeroes(int n) {
+		if (n < 5) {
+			return 0;
+		} else if (n == 5) {
+			return 1;
+		} else {
+			int count = 0;
+			while (n > 0) {
+				int temp = n / 5;
+				count = count + temp;
+				n = temp;
+			}
+			return count;
+		}
+	}
 
-    public static void main(String[] args) {
-        Solution0172 solution = new Solution0172();
-        for (int i = 0; i < 100; i++) {
-            System.out.println(i + " : " + solution.trailingZeroes(i));
-        }
-    }
+	public static void main(String[] args) {
+		Solution0172 solution = new Solution0172();
+		for (int i = 0; i < 100; i++) {
+			System.out.println(i + " : " + solution.trailingZeroes(i));
+		}
+	}
 }

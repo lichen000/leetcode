@@ -29,40 +29,40 @@ package mangolost;
  */
 public class Solution0724 {
 
-    /**
-     * @param nums
-     * @return
-     */
-    public int pivotIndex(int[] nums) {
-        int len = nums.length;
-        if (len < 3) {
-            return -1;
-        }
-        if (len == 3) {
-            if (nums[0] == nums[2]) {
-                return 1;
-            } else {
-                return -1;
-            }
-        }
-        int[] left = new int[len];
-        int sum = nums[0];
-        left[0] = 0;
-        for (int i = 1; i < len; i++) {
-            left[i] = left[i - 1] + nums[i - 1];
-            sum += nums[i];
-        }
-        for (int i = 0; i < len; i++) {
-            if (left[i] == sum - left[i] - nums[i]) {
-                return i;
-            }
-        }
-        return -1;
-    }
+	/**
+	 * @param nums
+	 * @return
+	 */
+	public int pivotIndex(int[] nums) {
+		int len = nums.length;
+		if (len < 3) {
+			return -1;
+		}
+		if (len == 3) {
+			if (nums[0] == nums[2]) {
+				return 1;
+			} else {
+				return -1;
+			}
+		}
+		int[] left = new int[len];
+		int sum = nums[0];
+		left[0] = 0;
+		for (int i = 1; i < len; i++) {
+			left[i] = left[i - 1] + nums[i - 1];
+			sum += nums[i];
+		}
+		for (int i = 0; i < len; i++) {
+			if (left[i] == sum - left[i] - nums[i]) {
+				return i;
+			}
+		}
+		return -1;
+	}
 
-    public static void main(String[] args) {
-        Solution0724 solution = new Solution0724();
-        int[] nums = {9, 1, 6, 3};
-        System.out.println(solution.pivotIndex(nums));
-    }
+	public static void main(String[] args) {
+		Solution0724 solution = new Solution0724();
+		int[] nums = {9, 1, 6, 3};
+		System.out.println(solution.pivotIndex(nums));
+	}
 }

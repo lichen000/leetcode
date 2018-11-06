@@ -10,9 +10,9 @@ package mangolost;
 //        C             100
 //        D             500
 //        M             1000
-//        For example, two is written as II in Roman numeral, just two one's added together. Twelve is written as, XII, which is simply X + II. The number twenty seven is written as XXVII, which is XX + V + II.
+//        For example, two is written as II in Roman numeral, just two one's added together. Twelve is written as, XII, which is simply X + II. The checkNumber twenty seven is written as XXVII, which is XX + V + II.
 //
-//        Roman numerals are usually written largest to smallest from left to right. However, the numeral for four is not IIII. Instead, the number four is written as IV. Because the one is before the five we subtract it making four. The same principle applies to the number nine, which is written as IX. There are six instances where subtraction is used:
+//        Roman numerals are usually written largest to smallest from left to right. However, the numeral for four is not IIII. Instead, the checkNumber four is written as IV. Because the one is before the five we subtract it making four. The same principle applies to the checkNumber nine, which is written as IX. There are six instances where subtraction is used:
 //
 //        I can be placed before V (5) and X (10) to make 4 and 9.
 //        X can be placed before L (50) and C (100) to make 40 and 90.
@@ -47,22 +47,22 @@ package mangolost;
  */
 public class Solution0012 {
 
-    /**
-     * @param num
-     * @return
-     */
-    public String intToRoman(int num) {
-        String[] qianwei = {"", "M", "MM", "MMM"};
-        String[] baiwei = {"", "C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM"};
-        String[] shiwei = {"", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC"};
-        String[] gewei = {"", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"};
-        return qianwei[num / 1000] + baiwei[(num % 1000) / 100] + shiwei[(num % 100) / 10] + gewei[num % 10];
-    }
+	/**
+	 * @param num
+	 * @return
+	 */
+	public String intToRoman(int num) {
+		String[] qianwei = {"", "M", "MM", "MMM"};
+		String[] baiwei = {"", "C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM"};
+		String[] shiwei = {"", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC"};
+		String[] gewei = {"", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"};
+		return qianwei[num / 1000] + baiwei[(num % 1000) / 100] + shiwei[(num % 100) / 10] + gewei[num % 10];
+	}
 
-    public static void main(String[] args) {
-        Solution0012 solution = new Solution0012();
-        for (int i = 1; i < 2000; i++) {
-            System.out.println(i + " : " + solution.intToRoman(i));
-        }
-    }
+	public static void main(String[] args) {
+		Solution0012 solution = new Solution0012();
+		for (int i = 1; i < 2000; i++) {
+			System.out.println(i + " : " + solution.intToRoman(i));
+		}
+	}
 }

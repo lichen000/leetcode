@@ -26,23 +26,23 @@ package mangolost;
  */
 public class Solution0326 {
 
-    /**
-     * @param n
-     * @return
-     */
-    public boolean isPowerOfThree(int n) {
-        while (n != 0 && n % 3 == 0) {
-            n = n / 3;
-        }
-        return n == 1;
-    }
+	/**
+	 * @param n
+	 * @return
+	 */
+	public boolean isPowerOfThree(int n) {
+		while (n != 0 && n % 3 == 0) {
+			n = n / 3;
+		}
+		return n == 1;
+	}
 
-    public static void main(String[] args) {
-        Solution0326 solution = new Solution0326();
-        for (int i = 1; i <= 10000; i++) {
-            if (solution.isPowerOfThree(i)) {
-                System.out.println(i + " : " + solution.isPowerOfThree(i));
-            }
-        }
-    }
+	public static void main(String[] args) {
+		Solution0326 solution = new Solution0326();
+		for (int i = 1; i <= 10000; i++) {
+			if (solution.isPowerOfThree(i)) {
+				System.out.println(i + " : " + solution.isPowerOfThree(i));
+			}
+		}
+	}
 }

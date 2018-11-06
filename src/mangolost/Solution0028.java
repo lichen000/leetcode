@@ -23,53 +23,53 @@ package mangolost;
  */
 public class Solution0028 {
 
-    /**
-     * @param haystack
-     * @param needle
-     * @return
-     */
-    public int strStr(String haystack, String needle) {
-        if ("".equals(needle)) {
-            return 0;
-        }
-        if (haystack.equals(needle)) {
-            return 0;
-        }
-        int len1 = haystack.length(), len2 = needle.length();
-        if (len1 <= len2) {
-            return -1;
-        }
-        char firstCharInNeedle = needle.charAt(0);
-        int index = haystack.indexOf(firstCharInNeedle);
-        if (index == -1 || len1 - index < len2) {
-            return -1;
-        }
-        int start = index;
-        while (true) {
-            int index1 = start, index2 = 0;
-            while ((index1 < len1) && (index2 < len2)) {
-                if (haystack.charAt(index1) == needle.charAt(index2)) {
-                    index1++;
-                    index2++;
-                } else {
-                    break;
-                }
-            }
-            if (index2 == len2) {
-                return start;
-            } else {
-                start++;
-                if (len1 - start < len2) {
-                    return -1;
-                }
-            }
-        }
-    }
+	/**
+	 * @param haystack
+	 * @param needle
+	 * @return
+	 */
+	public int strStr(String haystack, String needle) {
+		if ("".equals(needle)) {
+			return 0;
+		}
+		if (haystack.equals(needle)) {
+			return 0;
+		}
+		int len1 = haystack.length(), len2 = needle.length();
+		if (len1 <= len2) {
+			return -1;
+		}
+		char firstCharInNeedle = needle.charAt(0);
+		int index = haystack.indexOf(firstCharInNeedle);
+		if (index == -1 || len1 - index < len2) {
+			return -1;
+		}
+		int start = index;
+		while (true) {
+			int index1 = start, index2 = 0;
+			while ((index1 < len1) && (index2 < len2)) {
+				if (haystack.charAt(index1) == needle.charAt(index2)) {
+					index1++;
+					index2++;
+				} else {
+					break;
+				}
+			}
+			if (index2 == len2) {
+				return start;
+			} else {
+				start++;
+				if (len1 - start < len2) {
+					return -1;
+				}
+			}
+		}
+	}
 
-    public static void main(String[] args) {
-        Solution0028 solution = new Solution0028();
-        String haystack = "mississippi", needle = "issip";
-        int x = solution.strStr(haystack, needle);
-        System.out.println(x);
-    }
+	public static void main(String[] args) {
+		Solution0028 solution = new Solution0028();
+		String haystack = "mississippi", needle = "issip";
+		int x = solution.strStr(haystack, needle);
+		System.out.println(x);
+	}
 }

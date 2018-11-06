@@ -23,31 +23,31 @@ import java.util.Map;
  */
 public class Solution0219 {
 
-    /**
-     * @param nums
-     * @param k
-     * @return
-     */
-    public boolean containsNearbyDuplicate(int[] nums, int k) {
-        Map<Integer, Integer> map = new HashMap<>();
-        for (int i = 0, len = nums.length; i < len; i++) {
-            if (map.containsKey(nums[i])) {
-                if (Math.abs(i - map.get(nums[i])) <= k) {
-                    return true;
-                } else {
-                    map.put(nums[i], i);
-                }
-            } else {
-                map.put(nums[i], i);
-            }
-        }
-        return false;
-    }
+	/**
+	 * @param nums
+	 * @param k
+	 * @return
+	 */
+	public boolean containsNearbyDuplicate(int[] nums, int k) {
+		Map<Integer, Integer> map = new HashMap<>();
+		for (int i = 0, len = nums.length; i < len; i++) {
+			if (map.containsKey(nums[i])) {
+				if (Math.abs(i - map.get(nums[i])) <= k) {
+					return true;
+				} else {
+					map.put(nums[i], i);
+				}
+			} else {
+				map.put(nums[i], i);
+			}
+		}
+		return false;
+	}
 
-    public static void main(String[] args) {
-        Solution0219 solution = new Solution0219();
-        int[] nums = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 9};
-        int k = 3;
-        System.out.println(solution.containsNearbyDuplicate(nums, k));
-    }
+	public static void main(String[] args) {
+		Solution0219 solution = new Solution0219();
+		int[] nums = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 9};
+		int k = 3;
+		System.out.println(solution.containsNearbyDuplicate(nums, k));
+	}
 }

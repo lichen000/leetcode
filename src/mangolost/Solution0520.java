@@ -21,44 +21,44 @@ package mangolost;
  */
 public class Solution0520 {
 
-    /**
-     * @param word
-     * @return
-     */
-    public boolean detectCapitalUse(String word) {
-        int len = word.length();
-        if (len == 1) {
-            return true;
-        }
-        char first = word.charAt(0);
-        char second = word.charAt(1);
-        if (first < 'a') {
-            if (second < 'a') {
-                for (int i = 2; i < len; i++) {
-                    if (word.charAt(i) > 'Z') {
-                        return false;
-                    }
-                }
-            } else {
-                for (int i = 2; i < len; i++) {
-                    if (word.charAt(i) < 'a') {
-                        return false;
-                    }
-                }
-            }
-        } else {
-            for (int i = 1; i < len; i++) {
-                if (word.charAt(i) < 'a') {
-                    return false;
-                }
-            }
-        }
-        return true;
-    }
+	/**
+	 * @param word
+	 * @return
+	 */
+	public boolean detectCapitalUse(String word) {
+		int len = word.length();
+		if (len == 1) {
+			return true;
+		}
+		char first = word.charAt(0);
+		char second = word.charAt(1);
+		if (first < 'a') {
+			if (second < 'a') {
+				for (int i = 2; i < len; i++) {
+					if (word.charAt(i) > 'Z') {
+						return false;
+					}
+				}
+			} else {
+				for (int i = 2; i < len; i++) {
+					if (word.charAt(i) < 'a') {
+						return false;
+					}
+				}
+			}
+		} else {
+			for (int i = 1; i < len; i++) {
+				if (word.charAt(i) < 'a') {
+					return false;
+				}
+			}
+		}
+		return true;
+	}
 
-    public static void main(String[] args) {
-        Solution0520 solution = new Solution0520();
-        System.out.println((solution.detectCapitalUse("USA")));
-        System.out.println((solution.detectCapitalUse("FlaG")));
-    }
+	public static void main(String[] args) {
+		Solution0520 solution = new Solution0520();
+		System.out.println((solution.detectCapitalUse("USA")));
+		System.out.println((solution.detectCapitalUse("FlaG")));
+	}
 }

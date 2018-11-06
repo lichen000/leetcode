@@ -29,38 +29,38 @@ import java.util.List;
  */
 public class Solution0350 {
 
-    /**
-     * @param nums1
-     * @param nums2
-     * @return
-     */
-    public int[] intersect(int[] nums1, int[] nums2) {
-        Arrays.sort(nums1);
-        Arrays.sort(nums2);
-        List<Integer> list = new ArrayList<>();
-        for (int i = 0, j = 0, len1 = nums1.length, len2 = nums2.length; i < len1 && j < len2; ) {
-            if (nums1[i] == nums2[j]) {
-                list.add(nums1[i]);
-                i++;
-                j++;
-            } else if (nums1[i] < nums2[j]) {
-                i++;
-            } else {
-                j++;
-            }
-        }
-        int[] result = new int[list.size()];
-        for (int i = 0, len = result.length; i < len; i++) {
-            result[i] = list.get(i);
-        }
-        return result;
-    }
+	/**
+	 * @param nums1
+	 * @param nums2
+	 * @return
+	 */
+	public int[] intersect(int[] nums1, int[] nums2) {
+		Arrays.sort(nums1);
+		Arrays.sort(nums2);
+		List<Integer> list = new ArrayList<>();
+		for (int i = 0, j = 0, len1 = nums1.length, len2 = nums2.length; i < len1 && j < len2; ) {
+			if (nums1[i] == nums2[j]) {
+				list.add(nums1[i]);
+				i++;
+				j++;
+			} else if (nums1[i] < nums2[j]) {
+				i++;
+			} else {
+				j++;
+			}
+		}
+		int[] result = new int[list.size()];
+		for (int i = 0, len = result.length; i < len; i++) {
+			result[i] = list.get(i);
+		}
+		return result;
+	}
 
-    public static void main(String[] args) {
-        Solution0350 solution = new Solution0350();
-        int[] nums1 = new int[]{1, 2, 2, 1};
-        int[] nums2 = new int[]{2, 2};
-        int[] y = solution.intersect(nums1, nums2);
-        System.out.println(Arrays.toString(y));
-    }
+	public static void main(String[] args) {
+		Solution0350 solution = new Solution0350();
+		int[] nums1 = new int[]{1, 2, 2, 1};
+		int[] nums2 = new int[]{2, 2};
+		int[] y = solution.intersect(nums1, nums2);
+		System.out.println(Arrays.toString(y));
+	}
 }

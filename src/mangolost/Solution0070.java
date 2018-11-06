@@ -27,30 +27,30 @@ package mangolost;
  */
 public class Solution0070 {
 
-    /**
-     * @param n
-     * @return
-     */
-    public int climbStairs(int n) {
-        if (n < 3) {
-            return n;
-        } else {
-            int pre = 1;
-            int now = 2;
-            int next = 0;
-            for (int i = 3; i <= n; i++) {
-                next = pre + now;
-                pre = now;
-                now = next;
-            }
-            return next;
-        }
-    }
+	/**
+	 * @param n
+	 * @return
+	 */
+	public int climbStairs(int n) {
+		if (n < 3) {
+			return n;
+		} else {
+			int pre = 1;
+			int now = 2;
+			int next = 0;
+			for (int i = 3; i <= n; i++) {
+				next = pre + now;
+				pre = now;
+				now = next;
+			}
+			return next;
+		}
+	}
 
-    public static void main(String[] args) {
-        Solution0070 solution = new Solution0070();
-        for (int i = 1; i <= 30; i++) {
-            System.out.println("climbStaris(" + i + ")=" + solution.climbStairs(i));
-        }
-    }
+	public static void main(String[] args) {
+		Solution0070 solution = new Solution0070();
+		for (int i = 1; i <= 30; i++) {
+			System.out.println("climbStaris(" + i + ")=" + solution.climbStairs(i));
+		}
+	}
 }

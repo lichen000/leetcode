@@ -20,51 +20,51 @@ import java.util.TreeMap;
  */
 public class Solution0506 {
 
-    /**
-     * @param nums
-     * @return
-     */
-    public String[] findRelativeRanks(int[] nums) {
-        int len = nums.length;
-        String[] result = new String[len];
-        if (len > 0) {
-            Map<Integer, Integer> map = new TreeMap<>();
-            for (int num : nums) {
-                map.put(num, 0);
-            }
-            int rank = map.size();
-            for (Map.Entry m : map.entrySet()) {
-                int index = 0;
-                while (index < len) {
-                    if ((int) m.getKey() == nums[index]) {
-                        break;
-                    }
-                    index++;
-                }
-                switch (rank) {
-                    case 1:
-                        result[index] = "Gold Medal";
-                        break;
-                    case 2:
-                        result[index] = "Silver Medal";
-                        break;
-                    case 3:
-                        result[index] = "Bronze Medal";
-                        break;
-                    default:
-                        result[index] = String.valueOf(rank);
-                        break;
-                }
-                rank--;
-            }
-        }
-        return result;
-    }
+	/**
+	 * @param nums
+	 * @return
+	 */
+	public String[] findRelativeRanks(int[] nums) {
+		int len = nums.length;
+		String[] result = new String[len];
+		if (len > 0) {
+			Map<Integer, Integer> map = new TreeMap<>();
+			for (int num : nums) {
+				map.put(num, 0);
+			}
+			int rank = map.size();
+			for (Map.Entry m : map.entrySet()) {
+				int index = 0;
+				while (index < len) {
+					if ((int) m.getKey() == nums[index]) {
+						break;
+					}
+					index++;
+				}
+				switch (rank) {
+					case 1:
+						result[index] = "Gold Medal";
+						break;
+					case 2:
+						result[index] = "Silver Medal";
+						break;
+					case 3:
+						result[index] = "Bronze Medal";
+						break;
+					default:
+						result[index] = String.valueOf(rank);
+						break;
+				}
+				rank--;
+			}
+		}
+		return result;
+	}
 
-    public static void main(String[] args) {
-        Solution0506 solution = new Solution0506();
-        int[] nums = new int[]{1, 6, 4, 3, 8, 5, 9, 0, 7, 2};
-        String[] result = solution.findRelativeRanks(nums);
-        System.out.println(Arrays.asList(result));
-    }
+	public static void main(String[] args) {
+		Solution0506 solution = new Solution0506();
+		int[] nums = new int[]{1, 6, 4, 3, 8, 5, 9, 0, 7, 2};
+		String[] result = solution.findRelativeRanks(nums);
+		System.out.println(Arrays.asList(result));
+	}
 }

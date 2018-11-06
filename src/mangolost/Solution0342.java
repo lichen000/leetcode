@@ -12,23 +12,23 @@ package mangolost;
  */
 public class Solution0342 {
 
-    /**
-     * @param num
-     * @return
-     */
-    public boolean isPowerOfFour(int num) {
-        while (num != 0 && num % 4 == 0) {
-            num = num / 4;
-        }
-        return num == 1;
-    }
+	/**
+	 * @param num
+	 * @return
+	 */
+	public boolean isPowerOfFour(int num) {
+		while (num != 0 && num % 4 == 0) {
+			num = num / 4;
+		}
+		return num == 1;
+	}
 
-    public static void main(String[] args) {
-        Solution0342 solution = new Solution0342();
-        for (int i = 1; i <= 10000; i++) {
-            if (solution.isPowerOfFour(i)) {
-                System.out.println(i + " : " + solution.isPowerOfFour(i));
-            }
-        }
-    }
+	public static void main(String[] args) {
+		Solution0342 solution = new Solution0342();
+		for (int i = 1; i <= 10000; i++) {
+			if (solution.isPowerOfFour(i)) {
+				System.out.println(i + " : " + solution.isPowerOfFour(i));
+			}
+		}
+	}
 }

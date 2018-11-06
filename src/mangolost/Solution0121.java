@@ -23,30 +23,30 @@ package mangolost;
  */
 public class Solution0121 {
 
-    /**
-     * @param prices
-     * @return
-     */
-    public int maxProfit(int[] prices) {
-        if (prices == null || prices.length < 2) {
-            return 0;
-        }
-        int min = Integer.MAX_VALUE, result = 0;
-        for (int price : prices) {
-            if (price < min) {
-                min = price;
-            }
-            int temp = price - min;
-            if (result < temp) {
-                result = temp;
-            }
-        }
-        return result;
-    }
+	/**
+	 * @param prices
+	 * @return
+	 */
+	public int maxProfit(int[] prices) {
+		if (prices == null || prices.length < 2) {
+			return 0;
+		}
+		int min = Integer.MAX_VALUE, result = 0;
+		for (int price : prices) {
+			if (price < min) {
+				min = price;
+			}
+			int temp = price - min;
+			if (result < temp) {
+				result = temp;
+			}
+		}
+		return result;
+	}
 
-    public static void main(String[] args) {
-        Solution0121 solution = new Solution0121();
-        int[] prices = new int[]{7, 1, 5, 3, 6, 4};
-        System.out.println(solution.maxProfit(prices));
-    }
+	public static void main(String[] args) {
+		Solution0121 solution = new Solution0121();
+		int[] prices = new int[]{7, 1, 5, 3, 6, 4};
+		System.out.println(solution.maxProfit(prices));
+	}
 }

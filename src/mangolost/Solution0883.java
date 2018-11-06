@@ -49,40 +49,40 @@ package mangolost;
  */
 public class Solution0883 {
 
-    /**
-     * @param grid
-     * @return
-     */
-    public int projectionArea(int[][] grid) {
-        int result = 0;
-        int len = grid.length;
-        for (int i = 0; i < len; i++) {
-            int row_max = 0;
-            int column_max = 0;
-            for (int j = 0; j < len; j++) {
-                if (grid[i][j] > 0) {
-                    result++;
-                    row_max = Math.max(row_max, grid[i][j]);
-                }
-                column_max = Math.max(column_max, grid[j][i]);
-            }
-            result += row_max + column_max;
-        }
-        return result;
-    }
+	/**
+	 * @param grid
+	 * @return
+	 */
+	public int projectionArea(int[][] grid) {
+		int result = 0;
+		int len = grid.length;
+		for (int i = 0; i < len; i++) {
+			int row_max = 0;
+			int column_max = 0;
+			for (int j = 0; j < len; j++) {
+				if (grid[i][j] > 0) {
+					result++;
+					row_max = Math.max(row_max, grid[i][j]);
+				}
+				column_max = Math.max(column_max, grid[j][i]);
+			}
+			result += row_max + column_max;
+		}
+		return result;
+	}
 
-    public static void main(String[] args) {
-        Solution0883 solution = new Solution0883();
-        int[][] grid1 = {{2}};
-        int[][] grid2 = {{1, 2}, {3, 4}};
-        int[][] grid3 = {{1, 0}, {0, 2}};
-        int[][] grid4 = {{1, 1, 1}, {1, 0, 1}, {1, 1, 1}};
-        int[][] grid5 = {{2, 2, 2}, {2, 1, 2}, {2, 2, 2}};
-        System.out.println(solution.projectionArea(grid1));
-        System.out.println(solution.projectionArea(grid2));
-        System.out.println(solution.projectionArea(grid3));
-        System.out.println(solution.projectionArea(grid4));
-        System.out.println(solution.projectionArea(grid5));
+	public static void main(String[] args) {
+		Solution0883 solution = new Solution0883();
+		int[][] grid1 = {{2}};
+		int[][] grid2 = {{1, 2}, {3, 4}};
+		int[][] grid3 = {{1, 0}, {0, 2}};
+		int[][] grid4 = {{1, 1, 1}, {1, 0, 1}, {1, 1, 1}};
+		int[][] grid5 = {{2, 2, 2}, {2, 1, 2}, {2, 2, 2}};
+		System.out.println(solution.projectionArea(grid1));
+		System.out.println(solution.projectionArea(grid2));
+		System.out.println(solution.projectionArea(grid3));
+		System.out.println(solution.projectionArea(grid4));
+		System.out.println(solution.projectionArea(grid5));
 
-    }
+	}
 }

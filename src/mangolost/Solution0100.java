@@ -37,46 +37,46 @@ package mangolost;
  */
 public class Solution0100 {
 
-    /**
-     * Definition for a binary tree node.
-     */
-    public class TreeNode {
-        int val;
-        TreeNode left = null;
-        TreeNode right = null;
+	/**
+	 * Definition for a binary tree node.
+	 */
+	public class TreeNode {
+		int val;
+		TreeNode left = null;
+		TreeNode right = null;
 
-        TreeNode(int x) {
-            val = x;
-        }
-    }
+		TreeNode(int x) {
+			val = x;
+		}
+	}
 
-    /**
-     * @param p
-     * @param q
-     * @return
-     */
-    public boolean isSameTree(TreeNode p, TreeNode q) {
-        if (p == null && q == null) {
-            return true;
-        } else if (p != null && q != null) {
-            return (p.val == q.val) && isSameTree(p.left, q.left) && isSameTree(p.right, q.right);
-        } else {
-            return false;
-        }
-    }
+	/**
+	 * @param p
+	 * @param q
+	 * @return
+	 */
+	public boolean isSameTree(TreeNode p, TreeNode q) {
+		if (p == null && q == null) {
+			return true;
+		} else if (p != null && q != null) {
+			return (p.val == q.val) && isSameTree(p.left, q.left) && isSameTree(p.right, q.right);
+		} else {
+			return false;
+		}
+	}
 
-    public static void main(String[] args) {
-        Solution0100 solution = new Solution0100();
+	public static void main(String[] args) {
+		Solution0100 solution = new Solution0100();
 
-        int[] arr1 = new int[]{1, 2, 4};
-        TreeNode top1 = solution.new TreeNode(arr1[0]);
-        top1.left = solution.new TreeNode(arr1[1]);
-        top1.right = solution.new TreeNode(arr1[2]);
+		int[] arr1 = new int[]{1, 2, 4};
+		TreeNode top1 = solution.new TreeNode(arr1[0]);
+		top1.left = solution.new TreeNode(arr1[1]);
+		top1.right = solution.new TreeNode(arr1[2]);
 
-        int[] arr2 = new int[]{1, 2, 4};
-        TreeNode top2 = solution.new TreeNode(arr2[0]);
-        top2.left = solution.new TreeNode(arr2[1]);
-        top2.right = solution.new TreeNode(arr2[2]);
-        System.out.println(solution.isSameTree(top1, top2));
-    }
+		int[] arr2 = new int[]{1, 2, 4};
+		TreeNode top2 = solution.new TreeNode(arr2[0]);
+		top2.left = solution.new TreeNode(arr2[1]);
+		top2.right = solution.new TreeNode(arr2[2]);
+		System.out.println(solution.isSameTree(top1, top2));
+	}
 }

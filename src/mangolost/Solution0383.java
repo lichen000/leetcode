@@ -16,30 +16,30 @@ package mangolost;
  */
 public class Solution0383 {
 
-    /**
-     * @param ransomNote
-     * @param magazine
-     * @return
-     */
-    public boolean canConstruct(String ransomNote, String magazine) {
-        int[] times = new int[26];
-        for (char ch : magazine.toCharArray()) {
-            times[ch - 'a']++;
-        }
-        for (char ch : ransomNote.toCharArray()) {
-            if (times[ch - 'a'] > 0) {
-                times[ch - 'a']--;
-            } else {
-                return false;
-            }
-        }
-        return true;
-    }
+	/**
+	 * @param ransomNote
+	 * @param magazine
+	 * @return
+	 */
+	public boolean canConstruct(String ransomNote, String magazine) {
+		int[] times = new int[26];
+		for (char ch : magazine.toCharArray()) {
+			times[ch - 'a']++;
+		}
+		for (char ch : ransomNote.toCharArray()) {
+			if (times[ch - 'a'] > 0) {
+				times[ch - 'a']--;
+			} else {
+				return false;
+			}
+		}
+		return true;
+	}
 
-    public static void main(String[] args) {
-        Solution0383 solution = new Solution0383();
-        System.out.println(solution.canConstruct("a", "b"));
-        System.out.println(solution.canConstruct("aa", "ab"));
-        System.out.println(solution.canConstruct("aa", "aab"));
-    }
+	public static void main(String[] args) {
+		Solution0383 solution = new Solution0383();
+		System.out.println(solution.canConstruct("a", "b"));
+		System.out.println(solution.canConstruct("aa", "ab"));
+		System.out.println(solution.canConstruct("aa", "aab"));
+	}
 }

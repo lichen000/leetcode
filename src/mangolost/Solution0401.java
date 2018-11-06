@@ -11,7 +11,7 @@ import java.util.List;
 //
 //        For example, the above binary watch reads "3:25".
 //
-//        Given a non-negative integer n which represents the number of LEDs that are currently on, return all possible times the watch could represent.
+//        Given a non-negative integer n which represents the checkNumber of LEDs that are currently on, return all possible times the watch could represent.
 //
 //        Example:
 //
@@ -27,27 +27,27 @@ import java.util.List;
  */
 public class Solution0401 {
 
-    /**
-     * @param num
-     * @return
-     */
-    public List<String> readBinaryWatch(int num) {
-        List<String> times = new ArrayList<>();
-        for (int h = 0; h < 12; h++) {
-            for (int m = 0; m < 60; m++) {
-                if (Integer.bitCount(h) + Integer.bitCount(m) == num) {
-                    times.add(String.format("%d:%02d", h, m));
-                }
-            }
-        }
-        return times;
-    }
+	/**
+	 * @param num
+	 * @return
+	 */
+	public List<String> readBinaryWatch(int num) {
+		List<String> times = new ArrayList<>();
+		for (int h = 0; h < 12; h++) {
+			for (int m = 0; m < 60; m++) {
+				if (Integer.bitCount(h) + Integer.bitCount(m) == num) {
+					times.add(String.format("%d:%02d", h, m));
+				}
+			}
+		}
+		return times;
+	}
 
-    public static void main(String[] args) {
-        Solution0401 solution = new Solution0401();
-        for (int i = 1; i <= 8; i++) { //最多用8个
-            List<String> result = solution.readBinaryWatch(i);
-            System.out.println(Arrays.toString(result.toArray()));
-        }
-    }
+	public static void main(String[] args) {
+		Solution0401 solution = new Solution0401();
+		for (int i = 1; i <= 8; i++) { //最多用8个
+			List<String> result = solution.readBinaryWatch(i);
+			System.out.println(Arrays.toString(result.toArray()));
+		}
+	}
 }

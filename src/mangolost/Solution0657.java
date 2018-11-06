@@ -16,45 +16,45 @@ package mangolost;
  */
 public class Solution0657 {
 
-    /**
-     * @param moves
-     * @return
-     */
-    public boolean judgeCircle(String moves) {
-        int len = moves.length();
-        if (len == 0) {
-            return true;
-        }
-        if (len % 2 != 0) {
-            return false;
-        }
-        int xPos = 0, yPos = 0;
-        for (int i = 0; i < len; i++) {
-            char ch = moves.charAt(i);
-            switch (ch) {
-                case 'U':
-                    yPos++;
-                    break;
-                case 'D':
-                    yPos--;
-                    break;
-                case 'L':
-                    xPos--;
-                    break;
-                case 'R':
-                    xPos++;
-                    break;
-                default:
-            }
-        }
-        return xPos == 0 && yPos == 0;
-    }
+	/**
+	 * @param moves
+	 * @return
+	 */
+	public boolean judgeCircle(String moves) {
+		int len = moves.length();
+		if (len == 0) {
+			return true;
+		}
+		if (len % 2 != 0) {
+			return false;
+		}
+		int xPos = 0, yPos = 0;
+		for (int i = 0; i < len; i++) {
+			char ch = moves.charAt(i);
+			switch (ch) {
+				case 'U':
+					yPos++;
+					break;
+				case 'D':
+					yPos--;
+					break;
+				case 'L':
+					xPos--;
+					break;
+				case 'R':
+					xPos++;
+					break;
+				default:
+			}
+		}
+		return xPos == 0 && yPos == 0;
+	}
 
-    public static void main(String[] args) {
-        Solution0657 solution = new Solution0657();
-        System.out.println(solution.judgeCircle("UD"));
-        System.out.println(solution.judgeCircle("LL"));
+	public static void main(String[] args) {
+		Solution0657 solution = new Solution0657();
+		System.out.println(solution.judgeCircle("UD"));
+		System.out.println(solution.judgeCircle("LL"));
 
 
-    }
+	}
 }

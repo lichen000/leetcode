@@ -40,56 +40,56 @@ package mangolost;
  */
 public class Solution0896 {
 
-    /**
-     * @param A
-     * @return
-     */
-    public boolean isMonotonic(int[] A) {
-        if (A.length <= 1) {
-            return true;
-        }
-        return isAscending(A) || isDescending(A);
-    }
+	/**
+	 * @param A
+	 * @return
+	 */
+	public boolean isMonotonic(int[] A) {
+		if (A.length <= 1) {
+			return true;
+		}
+		return isAscending(A) || isDescending(A);
+	}
 
-    /**
-     * @param A
-     * @return
-     */
-    public boolean isAscending(int[] A) {
-        int len = A.length;
-        for (int i = 0; i < len - 1; i++) {
-            if (A[i + 1] < A[i]) {
-                return false;
-            }
-        }
-        return true;
-    }
+	/**
+	 * @param A
+	 * @return
+	 */
+	public boolean isAscending(int[] A) {
+		int len = A.length;
+		for (int i = 0; i < len - 1; i++) {
+			if (A[i + 1] < A[i]) {
+				return false;
+			}
+		}
+		return true;
+	}
 
-    /**
-     * @param A
-     * @return
-     */
-    public boolean isDescending(int[] A) {
-        int len = A.length;
-        for (int i = 0; i < len - 1; i++) {
-            if (A[i + 1] > A[i]) {
-                return false;
-            }
-        }
-        return true;
-    }
+	/**
+	 * @param A
+	 * @return
+	 */
+	public boolean isDescending(int[] A) {
+		int len = A.length;
+		for (int i = 0; i < len - 1; i++) {
+			if (A[i + 1] > A[i]) {
+				return false;
+			}
+		}
+		return true;
+	}
 
-    public static void main(String[] args) {
-        Solution0896 solution = new Solution0896();
-        int[] nums1 = {1, 2, 2, 3};
-        int[] nums2 = {6, 5, 4, 4};
-        int[] nums3 = {1, 3, 2};
-        int[] nums4 = {1, 2, 4, 5};
-        int[] nums5 = {1, 1, 1};
-        System.out.println(solution.isMonotonic(nums1));
-        System.out.println(solution.isMonotonic(nums2));
-        System.out.println(solution.isMonotonic(nums3));
-        System.out.println(solution.isMonotonic(nums4));
-        System.out.println(solution.isMonotonic(nums5));
-    }
+	public static void main(String[] args) {
+		Solution0896 solution = new Solution0896();
+		int[] nums1 = {1, 2, 2, 3};
+		int[] nums2 = {6, 5, 4, 4};
+		int[] nums3 = {1, 3, 2};
+		int[] nums4 = {1, 2, 4, 5};
+		int[] nums5 = {1, 1, 1};
+		System.out.println(solution.isMonotonic(nums1));
+		System.out.println(solution.isMonotonic(nums2));
+		System.out.println(solution.isMonotonic(nums3));
+		System.out.println(solution.isMonotonic(nums4));
+		System.out.println(solution.isMonotonic(nums5));
+	}
 }

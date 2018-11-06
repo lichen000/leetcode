@@ -21,31 +21,31 @@ package mangolost;
  */
 public class Solution0479 {
 
-    /**
-     * @param n
-     * @return
-     */
-    public int largestPalindrome(int n) {
-        if (n == 1) {
-            return 9;
-        }
-        int maxNumber = (int) Math.pow(10, n) - 1;
-        for (int i = maxNumber; i > maxNumber / 10; i--) {
-            String str = new StringBuffer().append(i).reverse().toString();
-            long num = Long.valueOf(i + str);
-            for (long j = maxNumber; j * j >= num; j--) {
-                if (num % j == 0) {
-                    return (int) (num % 1337);
-                }
-            }
-        }
-        return 0;
-    }
+	/**
+	 * @param n
+	 * @return
+	 */
+	public int largestPalindrome(int n) {
+		if (n == 1) {
+			return 9;
+		}
+		int maxNumber = (int) Math.pow(10, n) - 1;
+		for (int i = maxNumber; i > maxNumber / 10; i--) {
+			String str = new StringBuffer().append(i).reverse().toString();
+			long num = Long.valueOf(i + str);
+			for (long j = maxNumber; j * j >= num; j--) {
+				if (num % j == 0) {
+					return (int) (num % 1337);
+				}
+			}
+		}
+		return 0;
+	}
 
-    public static void main(String[] args) {
-        Solution0479 solution = new Solution0479();
-        for (int i = 1; i <= 8; i++) {
-            System.out.println(i + " : " + solution.largestPalindrome(i));
-        }
-    }
+	public static void main(String[] args) {
+		Solution0479 solution = new Solution0479();
+		for (int i = 1; i <= 8; i++) {
+			System.out.println(i + " : " + solution.largestPalindrome(i));
+		}
+	}
 }

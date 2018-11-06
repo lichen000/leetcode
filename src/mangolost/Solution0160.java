@@ -25,63 +25,63 @@ package mangolost;
  */
 public class Solution0160 {
 
-    /**
-     * Definition for singly-linked list.
-     */
-    static class ListNode {
-        int val;
-        ListNode next;
+	/**
+	 * Definition for singly-linked list.
+	 */
+	static class ListNode {
+		int val;
+		ListNode next;
 
-        ListNode(int x) {
-            val = x;
-            next = null;
-        }
-    }
+		ListNode(int x) {
+			val = x;
+			next = null;
+		}
+	}
 
-    /**
-     * @param headA
-     * @param headB
-     * @return
-     */
-    public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
-        ListNode a = headA, b = headB;
-        while (a != b) {
-            if (a != null) {
-                a = a.next;
-            } else {
-                a = headB;
-            }
-            if (b != null) {
-                b = b.next;
-            } else {
-                b = headA;
-            }
-        }
-        return a;
-    }
+	/**
+	 * @param headA
+	 * @param headB
+	 * @return
+	 */
+	public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
+		ListNode a = headA, b = headB;
+		while (a != b) {
+			if (a != null) {
+				a = a.next;
+			} else {
+				a = headB;
+			}
+			if (b != null) {
+				b = b.next;
+			} else {
+				b = headA;
+			}
+		}
+		return a;
+	}
 
-    public static void main(String[] args) {
-        Solution0160 solution = new Solution0160();
+	public static void main(String[] args) {
+		Solution0160 solution = new Solution0160();
 
-        ListNode headA = new ListNode(1);
-        ListNode nodeA1 = new ListNode(2);
+		ListNode headA = new ListNode(1);
+		ListNode nodeA1 = new ListNode(2);
 
-        ListNode headB = new ListNode(3);
-        ListNode nodeB1 = new ListNode(4);
-        ListNode nodeB2 = new ListNode(5);
+		ListNode headB = new ListNode(3);
+		ListNode nodeB1 = new ListNode(4);
+		ListNode nodeB2 = new ListNode(5);
 
-        ListNode nodeC1 = new ListNode(6);
-        ListNode nodeC2 = new ListNode(7);
+		ListNode nodeC1 = new ListNode(6);
+		ListNode nodeC2 = new ListNode(7);
 
-        headA.next = nodeA1;
-        nodeA1.next = nodeC1;
+		headA.next = nodeA1;
+		nodeA1.next = nodeC1;
 
-        headB.next = nodeB1;
-        nodeB1.next = nodeB2;
-        nodeB2.next = nodeC1;
+		headB.next = nodeB1;
+		nodeB1.next = nodeB2;
+		nodeB2.next = nodeC1;
 
-        nodeC1.next = nodeC2;
+		nodeC1.next = nodeC2;
 
-        System.out.println(solution.getIntersectionNode(headA, headB).val);
-    }
+		System.out.println(solution.getIntersectionNode(headA, headB).val);
+	}
 }

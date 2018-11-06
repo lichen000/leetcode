@@ -16,27 +16,27 @@ package mangolost;
  */
 public class Solution0258 {
 
-    /**
-     * @param num
-     * @return
-     */
-    public int addDigits(int num) {
-        if (num < 10) {
-            return num;
-        } else {
-            int temp = num % 9;
-            if (temp == 0) {
-                return 9;
-            } else {
-                return temp;
-            }
-        }
-    }
+	/**
+	 * @param num
+	 * @return
+	 */
+	public int addDigits(int num) {
+		if (num < 10) {
+			return num;
+		} else {
+			int temp = num % 9;
+			if (temp == 0) {
+				return 9;
+			} else {
+				return temp;
+			}
+		}
+	}
 
-    public static void main(String[] args) {
-        Solution0258 solution = new Solution0258();
-        for (int i = 0; i <= 100; i++) {
-            System.out.println(i + " : " + solution.addDigits(i));
-        }
-    }
+	public static void main(String[] args) {
+		Solution0258 solution = new Solution0258();
+		for (int i = 0; i <= 100; i++) {
+			System.out.println(i + " : " + solution.addDigits(i));
+		}
+	}
 }

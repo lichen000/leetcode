@@ -27,41 +27,41 @@ package mangolost;
  */
 public class Solution0704 {
 
-    /**
-     * @param nums
-     * @param target
-     * @return
-     */
-    public int search(int[] nums, int target) {
-        int len = nums.length;
-        int left = 0;
-        int right = len - 1;
-        int middle = (left + right) / 2;
-        while (left <= right) {
-            if (nums[left] == target) {
-                return left;
-            }
-            if (nums[right] == target) {
-                return right;
-            }
-            middle = (left + right) / 2;
-            if (nums[middle] == target) {
-                return middle;
-            } else if (nums[middle] > target) {
-                left++;
-                right = middle;
-            } else if (nums[middle] < target) {
-                left = middle;
-                right--;
-            }
-        }
-        return -1;
-    }
+	/**
+	 * @param nums
+	 * @param target
+	 * @return
+	 */
+	public int search(int[] nums, int target) {
+		int len = nums.length;
+		int left = 0;
+		int right = len - 1;
+		int middle = (left + right) / 2;
+		while (left <= right) {
+			if (nums[left] == target) {
+				return left;
+			}
+			if (nums[right] == target) {
+				return right;
+			}
+			middle = (left + right) / 2;
+			if (nums[middle] == target) {
+				return middle;
+			} else if (nums[middle] > target) {
+				left++;
+				right = middle;
+			} else if (nums[middle] < target) {
+				left = middle;
+				right--;
+			}
+		}
+		return -1;
+	}
 
-    public static void main(String[] args) {
-        Solution0704 solution = new Solution0704();
-        int[] nums = {7, 15, 16, 87, 93, 715, 716, 1987, 1993, 2017, 2018};
-        int target = 716;
-        System.out.println(solution.search(nums, target));
-    }
+	public static void main(String[] args) {
+		Solution0704 solution = new Solution0704();
+		int[] nums = {7, 15, 16, 87, 93, 715, 716, 1987, 1993, 2017, 2018};
+		int target = 716;
+		System.out.println(solution.search(nums, target));
+	}
 }

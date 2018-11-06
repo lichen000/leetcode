@@ -26,47 +26,47 @@ import java.util.Map;
  */
 public class Solution0389 {
 
-    /**
-     * @param s
-     * @param t
-     * @return
-     */
-    public char findTheDifference(String s, String t) {
-        Map<Character, Integer> charTimes_s = new HashMap<>();
-        for (Character ch : s.toCharArray()) {
-            if (charTimes_s.containsKey(ch)) {
-                int times = charTimes_s.get(ch) + 1;
-                charTimes_s.put(ch, times);
-            } else {
-                charTimes_s.put(ch, 1);
-            }
-        }
-        Map<Character, Integer> charTimes_t = new HashMap<>();
-        for (Character ch : t.toCharArray()) {
-            if (charTimes_t.containsKey(ch)) {
-                int times = charTimes_t.get(ch) + 1;
-                charTimes_t.put(ch, times);
-            } else {
-                charTimes_t.put(ch, 1);
-            }
-        }
-        for (Character ch : charTimes_t.keySet()) {
-            if (!charTimes_s.containsKey(ch)) {
-                return ch;
-            } else {
-                int value1 = charTimes_s.get(ch);
-                int value2 = charTimes_t.get(ch);
-                if (value1 < value2) {
-                    return ch;
-                }
-            }
-        }
-        return 0;
-    }
+	/**
+	 * @param s
+	 * @param t
+	 * @return
+	 */
+	public char findTheDifference(String s, String t) {
+		Map<Character, Integer> charTimes_s = new HashMap<>();
+		for (Character ch : s.toCharArray()) {
+			if (charTimes_s.containsKey(ch)) {
+				int times = charTimes_s.get(ch) + 1;
+				charTimes_s.put(ch, times);
+			} else {
+				charTimes_s.put(ch, 1);
+			}
+		}
+		Map<Character, Integer> charTimes_t = new HashMap<>();
+		for (Character ch : t.toCharArray()) {
+			if (charTimes_t.containsKey(ch)) {
+				int times = charTimes_t.get(ch) + 1;
+				charTimes_t.put(ch, times);
+			} else {
+				charTimes_t.put(ch, 1);
+			}
+		}
+		for (Character ch : charTimes_t.keySet()) {
+			if (!charTimes_s.containsKey(ch)) {
+				return ch;
+			} else {
+				int value1 = charTimes_s.get(ch);
+				int value2 = charTimes_t.get(ch);
+				if (value1 < value2) {
+					return ch;
+				}
+			}
+		}
+		return 0;
+	}
 
-    public static void main(String[] args) {
-        Solution0389 solution = new Solution0389();
-        String s = "mangolost", t = "omgoratlns";
-        System.out.println(solution.findTheDifference(s, t));
-    }
+	public static void main(String[] args) {
+		Solution0389 solution = new Solution0389();
+		String s = "mangolost", t = "omgoratlns";
+		System.out.println(solution.findTheDifference(s, t));
+	}
 }

@@ -13,41 +13,41 @@ package mangolost;
  */
 public class Solution0541 {
 
-    /**
-     * @param s
-     * @param k
-     * @return
-     */
-    public String reverseStr(String s, int k) {
-        int len = s.length();
-        StringBuilder sb = new StringBuilder();
-        int start = 0;
-        int i, j;
-        while (start <= len) {
-            if (len - start <= k) {
-                i = len - 1;
-                j = len;
-            } else {
-                i = start + k - 1;
-                j = start + k;
-            }
-            while (i >= start) {
-                sb.append(s.charAt(i));
-                i--;
-            }
-            while (j < len && j < start + 2 * k) {
-                sb.append(s.charAt(j));
-                j++;
-            }
-            start += 2 * k;
-        }
-        return sb.toString();
-    }
+	/**
+	 * @param s
+	 * @param k
+	 * @return
+	 */
+	public String reverseStr(String s, int k) {
+		int len = s.length();
+		StringBuilder sb = new StringBuilder();
+		int start = 0;
+		int i, j;
+		while (start <= len) {
+			if (len - start <= k) {
+				i = len - 1;
+				j = len;
+			} else {
+				i = start + k - 1;
+				j = start + k;
+			}
+			while (i >= start) {
+				sb.append(s.charAt(i));
+				i--;
+			}
+			while (j < len && j < start + 2 * k) {
+				sb.append(s.charAt(j));
+				j++;
+			}
+			start += 2 * k;
+		}
+		return sb.toString();
+	}
 
-    public static void main(String[] args) {
-        Solution0541 solution = new Solution0541();
-        String s = "abcdefg";
-        int k = 2;
-        System.out.println((solution.reverseStr(s, k)));
-    }
+	public static void main(String[] args) {
+		Solution0541 solution = new Solution0541();
+		String s = "abcdefg";
+		int k = 2;
+		System.out.println((solution.reverseStr(s, k)));
+	}
 }

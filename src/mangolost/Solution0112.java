@@ -22,51 +22,51 @@ package mangolost;
  */
 public class Solution0112 {
 
-    /**
-     * Definition for a binary tree node.
-     */
-    public class TreeNode {
-        int val;
-        TreeNode left = null;
-        TreeNode right = null;
+	/**
+	 * Definition for a binary tree node.
+	 */
+	public class TreeNode {
+		int val;
+		TreeNode left = null;
+		TreeNode right = null;
 
-        TreeNode(int x) {
-            val = x;
-        }
-    }
+		TreeNode(int x) {
+			val = x;
+		}
+	}
 
-    /**
-     * @param root
-     * @param sum
-     * @return
-     */
-    public boolean hasPathSum(TreeNode root, int sum) {
-        if (root == null) {
-            return false;
-        } else if (root.left == null && root.right == null) {
-            return root.val == sum;
-        } else {
-            int sumx = sum - root.val;
-            return hasPathSum(root.left, sumx) || hasPathSum(root.right, sumx);
-        }
-    }
+	/**
+	 * @param root
+	 * @param sum
+	 * @return
+	 */
+	public boolean hasPathSum(TreeNode root, int sum) {
+		if (root == null) {
+			return false;
+		} else if (root.left == null && root.right == null) {
+			return root.val == sum;
+		} else {
+			int sumx = sum - root.val;
+			return hasPathSum(root.left, sumx) || hasPathSum(root.right, sumx);
+		}
+	}
 
-    public static void main(String[] args) {
-        Solution0112 solution = new Solution0112();
+	public static void main(String[] args) {
+		Solution0112 solution = new Solution0112();
 //        [3,9,20,null,null,15,7]
 
-        //construct a binary tree
-        TreeNode root = solution.new TreeNode(5);
-        root.left = solution.new TreeNode(4);
-        root.right = solution.new TreeNode(8);
-        root.left.left = solution.new TreeNode(11);
-        root.right.left = solution.new TreeNode(13);
-        root.right.right = solution.new TreeNode(4);
-        root.left.left.left = solution.new TreeNode(7);
-        root.left.left.right = solution.new TreeNode(2);
-        root.right.right.right = solution.new TreeNode(1);
+		//construct a binary tree
+		TreeNode root = solution.new TreeNode(5);
+		root.left = solution.new TreeNode(4);
+		root.right = solution.new TreeNode(8);
+		root.left.left = solution.new TreeNode(11);
+		root.right.left = solution.new TreeNode(13);
+		root.right.right = solution.new TreeNode(4);
+		root.left.left.left = solution.new TreeNode(7);
+		root.left.left.right = solution.new TreeNode(2);
+		root.right.right.right = solution.new TreeNode(1);
 
-        int sum = 22;
-        System.out.println(solution.hasPathSum(root, sum));
-    }
+		int sum = 22;
+		System.out.println(solution.hasPathSum(root, sum));
+	}
 }

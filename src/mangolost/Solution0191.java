@@ -1,6 +1,6 @@
 package mangolost;
 
-//Write a function that takes an unsigned integer and returns the number of '1' bits it has (also known as the Hamming weight).
+//Write a function that takes an unsigned integer and returns the checkNumber of '1' bits it has (also known as the Hamming weight).
 //
 //		Example 1:
 //
@@ -18,25 +18,25 @@ package mangolost;
  */
 public class Solution0191 {
 
-    /**
-     * @param n
-     * @return
-     */
-    // you need to treat n as an unsigned value
-    public int hammingWeight(int n) {
-        int count = 0;
-        while (n != 0) {
-            int temp = n & 0x1;
-            count += temp;
-            n = n >>> 1;
-        }
-        return count;
-    }
+	/**
+	 * @param n
+	 * @return
+	 */
+	// you need to treat n as an unsigned value
+	public int hammingWeight(int n) {
+		int count = 0;
+		while (n != 0) {
+			int temp = n & 0x1;
+			count += temp;
+			n = n >>> 1;
+		}
+		return count;
+	}
 
-    public static void main(String[] args) {
-        Solution0191 solution = new Solution0191();
-        for (int i = 0; i <= 128; i++) {
-            System.out.println(solution.hammingWeight(i));
-        }
-    }
+	public static void main(String[] args) {
+		Solution0191 solution = new Solution0191();
+		for (int i = 0; i <= 128; i++) {
+			System.out.println(solution.hammingWeight(i));
+		}
+	}
 }

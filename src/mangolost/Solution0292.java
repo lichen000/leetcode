@@ -2,7 +2,7 @@ package mangolost;
 
 //You are playing the following Nim Game with your friend: There is a heap of stones on the table, each time one of you take turns to remove 1 to 3 stones. The one who removes the last stone will be the winner. You will take the first turn to remove the stones.
 //
-//        Both of you are very clever and have optimal strategies for the game. Write a function to determine whether you can win the game given the number of stones in the heap.
+//        Both of you are very clever and have optimal strategies for the game. Write a function to determine whether you can win the game given the checkNumber of stones in the heap.
 //
 //        Example:
 //
@@ -17,18 +17,18 @@ package mangolost;
  */
 public class Solution0292 {
 
-    /**
-     * @param n
-     * @return
-     */
-    public boolean canWinNim(int n) {
-        return n % 4 != 0;
-    }
+	/**
+	 * @param n
+	 * @return
+	 */
+	public boolean canWinNim(int n) {
+		return n % 4 != 0;
+	}
 
-    public static void main(String[] args) {
-        Solution0292 solution = new Solution0292();
-        for (int i = 1; i <= 100; i++) {
-            System.out.println(i + " : " + solution.canWinNim(i));
-        }
-    }
+	public static void main(String[] args) {
+		Solution0292 solution = new Solution0292();
+		for (int i = 1; i <= 100; i++) {
+			System.out.println(i + " : " + solution.canWinNim(i));
+		}
+	}
 }

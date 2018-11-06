@@ -25,45 +25,45 @@ package mangolost;
  */
 public class Solution0050 {
 
-    /**
-     * @param x
-     * @param n
-     * @return
-     */
-    public double myPow(double x, int n) {
-        if (x == 0) {
-            if (n <= 0) {
-                throw new RuntimeException("param error");
-            }
-            return 0;
-        }
-        if (n == 0) {
-            return 1;
-        }
-        if (n < 0) {
-            if (n == -2147483648) {
-                return 1 / myPow(x, 2147483647) / x;
-            }
-            return 1 / myPow(x, -n);
-        }
-        double result = 1;
-        for (int i = n; i > 0; i--) {
-            if (i % 2 == 0) {
-                x = x * x;
-                i = i / 2;
-            }
-            result = result * x;
-        }
-        return result;
-    }
+	/**
+	 * @param x
+	 * @param n
+	 * @return
+	 */
+	public double myPow(double x, int n) {
+		if (x == 0) {
+			if (n <= 0) {
+				throw new RuntimeException("param error");
+			}
+			return 0;
+		}
+		if (n == 0) {
+			return 1;
+		}
+		if (n < 0) {
+			if (n == -2147483648) {
+				return 1 / myPow(x, 2147483647) / x;
+			}
+			return 1 / myPow(x, -n);
+		}
+		double result = 1;
+		for (int i = n; i > 0; i--) {
+			if (i % 2 == 0) {
+				x = x * x;
+				i = i / 2;
+			}
+			result = result * x;
+		}
+		return result;
+	}
 
-    public static void main(String[] args) {
-        Solution0050 solution = new Solution0050();
-        double x = 1.9930716;
-        for (int n = -10; n <= 10; n++) {
-            double result = solution.myPow(x, n);
-            System.out.println("pow(" + x + ", " + n + ") = " + result);
-        }
+	public static void main(String[] args) {
+		Solution0050 solution = new Solution0050();
+		double x = 1.9930716;
+		for (int n = -10; n <= 10; n++) {
+			double result = solution.myPow(x, n);
+			System.out.println("pow(" + x + ", " + n + ") = " + result);
+		}
 
-    }
+	}
 }

@@ -21,51 +21,51 @@ package mangolost;
  */
 public class Solution0108 {
 
-    /**
-     * Definition for a binary tree node.
-     */
-    public class TreeNode {
-        int val;
-        TreeNode left = null;
-        TreeNode right = null;
+	/**
+	 * Definition for a binary tree node.
+	 */
+	public class TreeNode {
+		int val;
+		TreeNode left = null;
+		TreeNode right = null;
 
-        TreeNode(int x) {
-            val = x;
-        }
-    }
+		TreeNode(int x) {
+			val = x;
+		}
+	}
 
-    /**
-     * @param nums
-     * @return
-     */
-    public TreeNode sortedArrayToBST(int[] nums) {
-        if (nums == null) {
-            return null;
-        }
-        return sortedArrayToBSTPart(nums, 0, nums.length - 1);
-    }
+	/**
+	 * @param nums
+	 * @return
+	 */
+	public TreeNode sortedArrayToBST(int[] nums) {
+		if (nums == null) {
+			return null;
+		}
+		return sortedArrayToBSTPart(nums, 0, nums.length - 1);
+	}
 
-    /**
-     * @param nums
-     * @param left
-     * @param right
-     * @return
-     */
-    private TreeNode sortedArrayToBSTPart(int[] nums, int left, int right) {
-        if (left > right) {
-            return null;
-        }
-        int mid = (left + right) / 2;
-        TreeNode root = new TreeNode(nums[mid]);
-        root.left = sortedArrayToBSTPart(nums, left, mid - 1);
-        root.right = sortedArrayToBSTPart(nums, mid + 1, right);
-        return root;
-    }
+	/**
+	 * @param nums
+	 * @param left
+	 * @param right
+	 * @return
+	 */
+	private TreeNode sortedArrayToBSTPart(int[] nums, int left, int right) {
+		if (left > right) {
+			return null;
+		}
+		int mid = (left + right) / 2;
+		TreeNode root = new TreeNode(nums[mid]);
+		root.left = sortedArrayToBSTPart(nums, left, mid - 1);
+		root.right = sortedArrayToBSTPart(nums, mid + 1, right);
+		return root;
+	}
 
-    public static void main(String[] args) {
-        Solution0108 solution = new Solution0108();
-        int[] nums = new int[]{-10, -3, 0, 5, 9};
-        TreeNode root = solution.sortedArrayToBST(nums);
-        System.out.println(root.val);
-    }
+	public static void main(String[] args) {
+		Solution0108 solution = new Solution0108();
+		int[] nums = new int[]{-10, -3, 0, 5, 9};
+		TreeNode root = solution.sortedArrayToBST(nums);
+		System.out.println(root.val);
+	}
 }

@@ -30,47 +30,47 @@ import java.util.Arrays;
  */
 public class Solution0832 {
 
-    /**
-     * @param A
-     * @return
-     */
-    public int[][] flipAndInvertImage(int[][] A) {
-        int[][] result = new int[A.length][];
-        for (int i = 0, len = A.length; i < len; i++) {
-            int len2 = A[i].length;
-            int[] mid = new int[len2];
-            for (int j = 0; j < len2; j++) {
-                mid[j] = A[i][len2 - 1 - j] ^ 1;
-            }
-            result[i] = mid;
-        }
-        return result;
-    }
+	/**
+	 * @param A
+	 * @return
+	 */
+	public int[][] flipAndInvertImage(int[][] A) {
+		int[][] result = new int[A.length][];
+		for (int i = 0, len = A.length; i < len; i++) {
+			int len2 = A[i].length;
+			int[] mid = new int[len2];
+			for (int j = 0; j < len2; j++) {
+				mid[j] = A[i][len2 - 1 - j] ^ 1;
+			}
+			result[i] = mid;
+		}
+		return result;
+	}
 
-    public static void main(String[] args) {
-        Solution0832 solution = new Solution0832();
-        int[][] x1 = new int[][]{
-                {1, 1, 0},
-                {1, 0, 1},
-                {0, 0, 0}
-        };
-        int[][] x2 = new int[][]{
-                {1, 1, 0, 0},
-                {1, 0, 0, 1},
-                {0, 1, 1, 1},
-                {1, 0, 1, 0}
-        };
-        System.out.println();
-        int[][] y1 = solution.flipAndInvertImage(x1);
-        for (int[] aY1 : y1) {
-            System.out.println(Arrays.toString(aY1));
-        }
+	public static void main(String[] args) {
+		Solution0832 solution = new Solution0832();
+		int[][] x1 = new int[][]{
+				{1, 1, 0},
+				{1, 0, 1},
+				{0, 0, 0}
+		};
+		int[][] x2 = new int[][]{
+				{1, 1, 0, 0},
+				{1, 0, 0, 1},
+				{0, 1, 1, 1},
+				{1, 0, 1, 0}
+		};
+		System.out.println();
+		int[][] y1 = solution.flipAndInvertImage(x1);
+		for (int[] aY1 : y1) {
+			System.out.println(Arrays.toString(aY1));
+		}
 
-        int[][] y2 = solution.flipAndInvertImage(x2);
-        System.out.println();
-        for (int[] aY2 : y2) {
-            System.out.println(Arrays.toString(aY2));
-        }
+		int[][] y2 = solution.flipAndInvertImage(x2);
+		System.out.println();
+		for (int[] aY2 : y2) {
+			System.out.println(Arrays.toString(aY2));
+		}
 
-    }
+	}
 }

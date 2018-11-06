@@ -40,30 +40,30 @@ package mangolost;
  */
 public class Solution0026 {
 
-    public int removeDuplicates(int[] nums) {
+	public int removeDuplicates(int[] nums) {
 
-        int len = nums.length;
-        if (len < 2) {
-            return len;
-        }
-        int len2 = 1;
-        for (int i = 1; i < len; i++) {
-            if (nums[i] > nums[len2 - 1]) {
-                nums[len2] = nums[i];
-                len2++;
-            }
-        }
-        return len2;
-    }
+		int len = nums.length;
+		if (len < 2) {
+			return len;
+		}
+		int len2 = 1;
+		for (int i = 1; i < len; i++) {
+			if (nums[i] > nums[len2 - 1]) {
+				nums[len2] = nums[i];
+				len2++;
+			}
+		}
+		return len2;
+	}
 
-    public static void main(String[] args) {
-        Solution0026 solution0026 = new Solution0026();
-        int[] nums = {0, 0, 1, 1, 1, 2, 2, 3, 3, 4};
-        int len = solution0026.removeDuplicates(nums);
-        System.out.println("len=" + len);
-        for (int num : nums) {
-            System.out.print(num + " ");
-        }
+	public static void main(String[] args) {
+		Solution0026 solution0026 = new Solution0026();
+		int[] nums = {0, 0, 1, 1, 1, 2, 2, 3, 3, 4};
+		int len = solution0026.removeDuplicates(nums);
+		System.out.println("len=" + len);
+		for (int num : nums) {
+			System.out.print(num + " ");
+		}
 
-    }
+	}
 }

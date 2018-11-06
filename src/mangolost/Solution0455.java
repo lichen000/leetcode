@@ -1,6 +1,6 @@
 package mangolost;
 
-//Assume you are an awesome parent and want to give your children some cookies. But, you should give each child at most one cookie. Each child i has a greed factor gi, which is the minimum size of a cookie that the child will be content with; and each cookie j has a size sj. If sj >= gi, we can assign the cookie j to the child i, and the child i will be content. Your goal is to maximize the number of your content children and output the maximum number.
+//Assume you are an awesome parent and want to give your children some cookies. But, you should give each child at most one cookie. Each child i has a greed factor gi, which is the minimum size of a cookie that the child will be content with; and each cookie j has a size sj. If sj >= gi, we can assign the cookie j to the child i, and the child i will be content. Your goal is to maximize the checkNumber of your content children and output the maximum checkNumber.
 //
 //        Note:
 //        You may assume the greed factor is always positive.
@@ -30,32 +30,32 @@ import java.util.Arrays;
  */
 public class Solution0455 {
 
-    /**
-     * @param g
-     * @param s
-     * @return
-     */
-    public int findContentChildren(int[] g, int[] s) {
-        Arrays.sort(g);
-        Arrays.sort(s);
-        int i = 0, j = 0;
-        int count = 0;
-        while (i < g.length && j < s.length) {
-            if (g[i] <= s[j]) {
-                count++;
-                i++;
-            }
-            j++;
-        }
-        return count;
-    }
+	/**
+	 * @param g
+	 * @param s
+	 * @return
+	 */
+	public int findContentChildren(int[] g, int[] s) {
+		Arrays.sort(g);
+		Arrays.sort(s);
+		int i = 0, j = 0;
+		int count = 0;
+		while (i < g.length && j < s.length) {
+			if (g[i] <= s[j]) {
+				count++;
+				i++;
+			}
+			j++;
+		}
+		return count;
+	}
 
-    public static void main(String[] args) {
-        Solution0455 solution = new Solution0455();
-        int[] g = {1, 2, 3}, s = {1, 1};
-        System.out.println(solution.findContentChildren(g, s));
+	public static void main(String[] args) {
+		Solution0455 solution = new Solution0455();
+		int[] g = {1, 2, 3}, s = {1, 1};
+		System.out.println(solution.findContentChildren(g, s));
 
-        int[] g2 = {1, 2}, s2 = {1, 2, 3};
-        System.out.println(solution.findContentChildren(g2, s2));
-    }
+		int[] g2 = {1, 2}, s2 = {1, 2, 3};
+		System.out.println(solution.findContentChildren(g2, s2));
+	}
 }

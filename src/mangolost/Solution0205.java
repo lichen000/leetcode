@@ -29,47 +29,47 @@ import java.util.Map;
  */
 public class Solution0205 {
 
-    /**
-     * @param s
-     * @param t
-     * @return
-     */
-    public boolean isIsomorphic(String s, String t) {
-        if (s == null || t == null) {
-            throw new RuntimeException("input string should not be null");
-        }
-        if (s.equals(t)) {
-            return true;
-        } else if (s.length() != t.length()) {
-            return false;
-        } else if (s.length() == 1) {
-            return true;
-        } else {
-            Map<Character, Character> map = new HashMap<>();
-            Map<Character, Character> map2 = new HashMap<>();
-            for (int i = 0, len = s.length(); i < len; i++) {
-                char schar = s.charAt(i);
-                char tchar = t.charAt(i);
-                if (map.containsKey(schar)) {
-                    char value = map.get(schar);
-                    if (value != tchar) {
-                        return false;
-                    }
-                } else {
-                    if (map2.containsKey(tchar)) {
-                        return false;
-                    }
-                    map.put(schar, tchar);
-                    map2.put(tchar, schar);
-                }
-            }
-            return true;
-        }
-    }
+	/**
+	 * @param s
+	 * @param t
+	 * @return
+	 */
+	public boolean isIsomorphic(String s, String t) {
+		if (s == null || t == null) {
+			throw new RuntimeException("input string should not be null");
+		}
+		if (s.equals(t)) {
+			return true;
+		} else if (s.length() != t.length()) {
+			return false;
+		} else if (s.length() == 1) {
+			return true;
+		} else {
+			Map<Character, Character> map = new HashMap<>();
+			Map<Character, Character> map2 = new HashMap<>();
+			for (int i = 0, len = s.length(); i < len; i++) {
+				char schar = s.charAt(i);
+				char tchar = t.charAt(i);
+				if (map.containsKey(schar)) {
+					char value = map.get(schar);
+					if (value != tchar) {
+						return false;
+					}
+				} else {
+					if (map2.containsKey(tchar)) {
+						return false;
+					}
+					map.put(schar, tchar);
+					map2.put(tchar, schar);
+				}
+			}
+			return true;
+		}
+	}
 
-    public static void main(String[] args) {
-        Solution0205 solution = new Solution0205();
-        String s = "ab", t = "ca";
-        System.out.println(solution.isIsomorphic(s, t));
-    }
+	public static void main(String[] args) {
+		Solution0205 solution = new Solution0205();
+		String s = "ab", t = "ca";
+		System.out.println(solution.isIsomorphic(s, t));
+	}
 }

@@ -22,47 +22,47 @@ package mangolost;
  */
 public class Solution0069 {
 
-    /**
-     * @param x
-     * @return
-     */
-    public int mySqrt(int x) {
-        if (x <= 1) {
-            return x;
-        } else if (x <= 3) {
-            return 1;
-        }
-        if (x == Integer.MAX_VALUE) {
-            return 46340;
-        }
-        int low = 1, high = 46340;
-        int middle = 0;
-        while (low < high) {
-            middle = (low + high) / 2;
-            int temp = middle * middle;
-            if (temp == x) {
-                return middle;
-            } else if (temp > x) {
-                high = middle - 1;
-            } else {
-                low = middle;
-                if (high - low == 1) {
-                    if (high * high <= x) {
-                        return high;
-                    } else {
-                        return low;
-                    }
-                }
-            }
-        }
-        return low;
-    }
+	/**
+	 * @param x
+	 * @return
+	 */
+	public int mySqrt(int x) {
+		if (x <= 1) {
+			return x;
+		} else if (x <= 3) {
+			return 1;
+		}
+		if (x == Integer.MAX_VALUE) {
+			return 46340;
+		}
+		int low = 1, high = 46340;
+		int middle = 0;
+		while (low < high) {
+			middle = (low + high) / 2;
+			int temp = middle * middle;
+			if (temp == x) {
+				return middle;
+			} else if (temp > x) {
+				high = middle - 1;
+			} else {
+				low = middle;
+				if (high - low == 1) {
+					if (high * high <= x) {
+						return high;
+					} else {
+						return low;
+					}
+				}
+			}
+		}
+		return low;
+	}
 
-    public static void main(String[] args) {
-        Solution0069 solution = new Solution0069();
-        for (int i = 0; i <= 100; i++) {
-            System.out.println("sqrt(" + i + ")=" + solution.mySqrt(i));
-        }
-        System.out.println("sqrt(" + 2147483646 + ")=" + solution.mySqrt(2147483646));
-    }
+	public static void main(String[] args) {
+		Solution0069 solution = new Solution0069();
+		for (int i = 0; i <= 100; i++) {
+			System.out.println("sqrt(" + i + ")=" + solution.mySqrt(i));
+		}
+		System.out.println("sqrt(" + 2147483646 + ")=" + solution.mySqrt(2147483646));
+	}
 }

@@ -26,36 +26,36 @@ package mangolost;
  */
 public class Solution0029 {
 
-    /**
-     * @param dividend
-     * @param divisor
-     * @return
-     */
-    public int divide(int dividend, int divisor) {
-        if (dividend == Integer.MIN_VALUE && divisor == -1) {
-            return Integer.MAX_VALUE;
-        }
-        int result = 0;
-        int sign = (dividend < 0) ^ (divisor < 0) ? -1 : 1;
-        long dvd = Math.abs((long) dividend);
-        long dvs = Math.abs((long) divisor);
-        while (dvs <= dvd) {
-            long temp = dvs, mul = 1;
-            while (dvd >= temp << 1) {
-                temp <<= 1;
-                mul <<= 1;
-            }
-            dvd -= temp;
-            result += mul;
-        }
-        return sign == 1 ? result : -result;
-    }
+	/**
+	 * @param dividend
+	 * @param divisor
+	 * @return
+	 */
+	public int divide(int dividend, int divisor) {
+		if (dividend == Integer.MIN_VALUE && divisor == -1) {
+			return Integer.MAX_VALUE;
+		}
+		int result = 0;
+		int sign = (dividend < 0) ^ (divisor < 0) ? -1 : 1;
+		long dvd = Math.abs((long) dividend);
+		long dvs = Math.abs((long) divisor);
+		while (dvs <= dvd) {
+			long temp = dvs, mul = 1;
+			while (dvd >= temp << 1) {
+				temp <<= 1;
+				mul <<= 1;
+			}
+			dvd -= temp;
+			result += mul;
+		}
+		return sign == 1 ? result : -result;
+	}
 
-    public static void main(String[] args) {
-        Solution0029 solution = new Solution0029();
-        int dividend = 1993;
-        int divisor = 716;
-        int result = solution.divide(dividend, divisor);
-        System.out.println(result);
-    }
+	public static void main(String[] args) {
+		Solution0029 solution = new Solution0029();
+		int dividend = 1993;
+		int divisor = 716;
+		int result = solution.divide(dividend, divisor);
+		System.out.println(result);
+	}
 }

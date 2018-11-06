@@ -1,19 +1,9 @@
 package mangolost;
 
-//Reverse a singly linked list.
-//
-//		Example:
-//
-//		Input: 1->2->3->4->5->NULL
-//		Output: 5->4->3->2->1->NULL
-//		Follow up:
-//
-//		A linked list can be reversed either iteratively or recursively. Could you implement both?
-
 /**
  *
  */
-public class Solution0206 {
+public class Solution0019 {
 
 	/**
 	 * Definition for singly-linked list.
@@ -24,23 +14,28 @@ public class Solution0206 {
 
 		ListNode(int x) {
 			val = x;
-			next = null;
 		}
 	}
 
 	/**
 	 * @param head
+	 * @param n
 	 * @return
 	 */
-	public ListNode reverseList(ListNode head) {
-		if (head == null || head.next == null) {
-			return head;
+	public ListNode removeNthFromEnd(ListNode head, int n) {
+		ListNode dummy = new ListNode(0);
+		dummy.next = head;
+		ListNode first = dummy;
+		ListNode second = dummy;
+		for (int i = 1; i <= n + 1; i++) {
+			first = first.next;
 		}
-		ListNode nextNode = head.next;
-		ListNode headNew = reverseList(head.next); //在这个递归中会改变nextNode指向，最后指向最后末位
-		nextNode.next = head;
-		head.next = null;
-		return headNew;
+		while (first != null) {
+			first = first.next;
+			second = second.next;
+		}
+		second.next = second.next.next;
+		return dummy.next;
 	}
 
 	/**
@@ -78,13 +73,10 @@ public class Solution0206 {
 	}
 
 	public static void main(String[] args) {
-		Solution0206 solution = new Solution0206();
-
-		int[] arr = new int[]{1, 2, 3, 4, 5, 6, 7};
+		Solution0019 solution = new Solution0019();
+		int[] arr = new int[]{1, 9, 9, 3, 0, 7, 1, 6};
 		ListNode head = solution.genListNodes(arr);
-
-		ListNode headNew = solution.reverseList(head);
-
-		solution.printListNodes(headNew);
+		ListNode x = solution.removeNthFromEnd(head, 4);
+		solution.printListNodes(x);
 	}
 }
