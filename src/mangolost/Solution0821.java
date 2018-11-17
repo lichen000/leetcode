@@ -48,7 +48,7 @@ public class Solution0821 {
 
 	public static void main(String[] args) {
 		Solution0821 solution = new Solution0821();
-		String S = "ljlreainll";
+		String S = "lclichen";
 		char C = 'l';
 		int[] result = solution.shortestToChar(S, C);
 		System.out.println(Arrays.toString(result));

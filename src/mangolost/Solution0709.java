@@ -37,7 +37,7 @@ public class Solution0709 {
 
 	public static void main(String[] args) {
 		Solution0709 solution = new Solution0709();
-		String x = "Hello, Reainll!";
+		String x = "Hello, lichen!";
 		System.out.println(solution.toLowerCase(x));
 	}
 }

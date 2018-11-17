@@ -61,6 +61,6 @@ public class Solution0005 {
 		Solution0005 solution = new Solution0005();
 		System.out.println(solution.longestPalindrome("babad"));
 		System.out.println(solution.longestPalindrome("cbbd"));
-		System.out.println(solution.longestPalindrome("reainll"));
+		System.out.println(solution.longestPalindrome("lichen"));
 	}
 }

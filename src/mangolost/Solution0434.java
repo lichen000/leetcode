@@ -35,7 +35,7 @@ public class Solution0434 {
 
 	public static void main(String[] args) {
 		Solution0434 solution = new Solution0434();
-		String s = "Hello, my name is reainll";
+		String s = "Hello, my name is lichen";
 		System.out.println(solution.countSegments(s));
 	}
 }

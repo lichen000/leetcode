@@ -74,6 +74,6 @@ public class Solution0859 {
 
 	public static void main(String[] args) {
 		Solution0859 solution = new Solution0859();
-		System.out.println(solution.buddyStrings("reainll", "mangolost"));
+		System.out.println(solution.buddyStrings("lichen", "mangolost"));
 	}
 }

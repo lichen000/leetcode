@@ -59,7 +59,7 @@ public class Solution0917 {
 
 	public static void main(String[] args) {
 		Solution0917 solution = new Solution0917();
-		String s = "mango-2018-reainll-2017-lost";
+		String s = "mango-2018-lichen-2017-lost";
 		String s2 = solution.reverseOnlyLetters(s);
 		System.out.println(s2);
 	}

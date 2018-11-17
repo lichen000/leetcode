@@ -43,7 +43,7 @@ public class Solution0387 {
 
 	public static void main(String[] args) {
 		Solution0387 solution = new Solution0387();
-		String s = "Happy birthday, reainll";
+		String s = "Happy birthday, lichen";
 		System.out.println(solution.firstUniqChar(s));
 	}
 }

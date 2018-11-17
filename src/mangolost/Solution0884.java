@@ -59,7 +59,7 @@ public class Solution0884 {
 		Solution0884 solution = new Solution0884();
 		String A1 = "this apple is sweet", B1 = "this apple is sour";
 		String A2 = "apple apple", B2 = "banana";
-		String A3 = "happy everyday reainll", B3 = "reainll is so lovely";
+		String A3 = "happy everyday lichen", B3 = "lichen is so lovely";
 		System.out.println(Arrays.toString(solution.uncommonFromSentences(A1, B1)));
 		System.out.println(Arrays.toString(solution.uncommonFromSentences(A2, B2)));
 		System.out.println(Arrays.toString(solution.uncommonFromSentences(A3, B3)));
