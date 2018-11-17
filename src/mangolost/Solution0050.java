@@ -59,7 +59,7 @@ public class Solution0050 {
 
 	public static void main(String[] args) {
 		Solution0050 solution = new Solution0050();
-		double x = 1.9930716;
+		double x = 1.9990999;
 		for (int n = -10; n <= 10; n++) {
 			double result = solution.myPow(x, n);
 			System.out.println("pow(" + x + ", " + n + ") = " + result);

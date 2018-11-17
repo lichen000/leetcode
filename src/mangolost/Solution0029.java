@@ -53,8 +53,8 @@ public class Solution0029 {
 
 	public static void main(String[] args) {
 		Solution0029 solution = new Solution0029();
-		int dividend = 1993;
-		int divisor = 716;
+		int dividend = 1999;
+		int divisor = 999;
 		int result = solution.divide(dividend, divisor);
 		System.out.println(result);
 	}

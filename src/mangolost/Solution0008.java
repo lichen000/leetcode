@@ -122,7 +122,7 @@ public class Solution0008 {
 
 	public static void main(String[] args) {
 		Solution0008 solution = new Solution0008();
-		System.out.println(solution.myAtoi("-19930716"));
-		System.out.println(solution.myAtoi("     19930902"));
+		System.out.println(solution.myAtoi("-20181117"));
+		System.out.println(solution.myAtoi("     19870715"));
 	}
 }

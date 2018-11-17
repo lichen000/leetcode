@@ -62,7 +62,7 @@ public class Solution0093 {
 
 	public static void main(String[] args) {
 		Solution0093 solution = new Solution0093();
-		String s = "19930716";
+		String s = "20181117";
 		List<String> list = solution.restoreIpAddresses(s);
 		System.out.println(Arrays.toString(list.toArray()));
 	}

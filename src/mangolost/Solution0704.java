@@ -60,8 +60,8 @@ public class Solution0704 {
 
 	public static void main(String[] args) {
 		Solution0704 solution = new Solution0704();
-		int[] nums = {7, 15, 16, 87, 93, 715, 716, 1987, 1993, 2017, 2018};
-		int target = 716;
+		int[] nums = {7, 15, 16, 87, 93, 715, 999, 1987, 1999, 2017, 2018};
+		int target = 999;
 		System.out.println(solution.search(nums, target));
 	}
 }

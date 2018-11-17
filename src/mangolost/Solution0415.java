@@ -30,7 +30,7 @@ public class Solution0415 {
 	public static void main(String[] args) {
 		Solution0415 solution = new Solution0415();
 		String num1 = "19870715";
-		String num2 = "19930716";
+		String num2 = "20181117";
 		System.out.println(solution.addStrings(num1, num2));
 	}
 }

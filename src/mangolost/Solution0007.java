@@ -55,7 +55,7 @@ public class Solution0007 {
 
 	public static void main(String[] args) {
 		Solution0007 solution = new Solution0007();
-		int x = 19930716;
+		int x = 20181117;
 		int y = solution.reverse(x);
 		System.out.println(y);
 	}
