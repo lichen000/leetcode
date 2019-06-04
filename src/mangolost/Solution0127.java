@@ -88,7 +88,7 @@ public class Solution0127 {
     public static void main(String[] args) {
         Solution0127 solution = new Solution0127();
         String beginWord = "hit", endWord = "cog";
-        List<String> wordList = new ArrayList<String>() {
+        List<String> wordList = new ArrayList<>() {
             {
                 add("hot");
                 add("dot");

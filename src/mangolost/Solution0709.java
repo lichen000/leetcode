@@ -30,7 +30,7 @@ public class Solution0709 {
 			if (ch >= 'A' && ch <= 'Z') {
 				ch += 32;
 			}
-			result.append(String.valueOf(ch));
+			result.append(ch);
 		}
 		return result.toString();
 	}

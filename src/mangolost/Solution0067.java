@@ -32,16 +32,16 @@ public class Solution0067 {
 		int len_a = a.length();
 		int len_b = b.length();
 		int carry = 0, temp = 0;
-		String result = "";
+		StringBuilder result = new StringBuilder();
 		for (int i = 0; i < len_a; i++) {
 			int p = a.charAt(len_a - 1 - i) - '0';
 			int q = (i < len_b) ? b.charAt(len_b - 1 - i) - '0' : 0;
 			temp = p + q + carry;
 			carry = temp / 2;
-			result = temp % 2 + result;
+			result.insert(0, temp % 2);
 		}
 		if (carry == 0) {
-			return result;
+			return result.toString();
 		} else {
 			return "1" + result;
 		}

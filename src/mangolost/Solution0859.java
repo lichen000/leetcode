@@ -41,7 +41,7 @@ public class Solution0859 {
 	 */
 	public boolean buddyStrings(String A, String B) {
 		int len_A = A.length(), len_B = B.length();
-		if (len_A < 2 || len_B < 2 || len_A != len_B) {
+		if (len_B < 2 || len_A != len_B) {
 			return false;
 		}
 		if (A.equals(B)) {

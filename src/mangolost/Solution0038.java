@@ -41,7 +41,7 @@ public class Solution0038 {
 			StringBuilder result = new StringBuilder();
 			char currentChar = pre.charAt(0);
 			int currentTimes = 1;
-			String part = String.valueOf(currentTimes) + String.valueOf(currentChar);
+			String part = String.valueOf(currentTimes) + currentChar;
 			for (int i = 1; i < len; i++) {
 				char tempChar = pre.charAt(i);
 				if (currentChar == tempChar) {
@@ -51,7 +51,7 @@ public class Solution0038 {
 					currentChar = tempChar;
 					currentTimes = 1;
 				}
-				part = String.valueOf(currentTimes) + String.valueOf(currentChar);
+				part = String.valueOf(currentTimes) + currentChar;
 			}
 			result.append(part);
 			return result.toString();

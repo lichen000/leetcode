@@ -58,24 +58,15 @@ public class Solution0345 {
 	private boolean isVowel(char ch) {
 		switch (ch) {
 			case 'A':
-				return true;
-			case 'E':
-				return true;
-			case 'I':
-				return true;
-			case 'O':
-				return true;
-			case 'U':
-				return true;
-			case 'a':
-				return true;
-			case 'e':
-				return true;
-			case 'i':
-				return true;
-			case 'o':
-				return true;
 			case 'u':
+			case 'o':
+			case 'i':
+			case 'e':
+			case 'a':
+			case 'U':
+			case 'O':
+			case 'I':
+			case 'E':
 				return true;
 			default:
 				return false;

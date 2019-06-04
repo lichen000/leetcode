@@ -29,7 +29,7 @@ public class Solution0504 {
 		StringBuilder result = new StringBuilder();
 		while (num > 0) {
 			int yushu = num % 7;
-			result.insert(0, String.valueOf(yushu));
+			result.insert(0, yushu);
 			num = num / 7;
 		}
 		return result.toString();

@@ -13,6 +13,8 @@ package mangolost;
 //        Follow up:
 //        Could you do it in O(n) time and O(1) space?
 
+import java.util.Objects;
+
 /**
  *
  */
@@ -45,9 +47,9 @@ public class Solution0234 {
 			fast = fast.next.next;
 		}
 		ListNode last = slow.next, pre = head;
-		while (last.next != null) {
+		while (Objects.requireNonNull(last).next != null) {
 			ListNode tmp = last.next;
-			last.next = tmp.next;
+			last.next = Objects.requireNonNull(tmp).next;
 			tmp.next = slow.next;
 			slow.next = tmp;
 		}

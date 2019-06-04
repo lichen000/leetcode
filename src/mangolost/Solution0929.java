@@ -50,7 +50,7 @@ public class Solution0929 {
 			if (local.contains("+")) {
 				local = local.substring(0, local.indexOf('+'));
 			}
-			local = local.replaceAll(".", "");
+			local = local.replace(".", "");
 			set.add(local + rest);
 		}
 		return set.size();
